@@ -1,0 +1,191 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+/* Ajustes al header */
+header {
+  background: transparent!;
+  padding: 10px 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Menú a la derecha */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+nav ul li {
+  margin: 0;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 14px;
+}
+/* Nombre alineado a la izquierda */
+.header-left {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+.hero {
+  height: 100vh;
+  background: url('assets/home.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero h1 {
+  color: white;
+  font-size: 3rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Estilos para el apartado ¿Qué es el higienismo? */
+.higienismo-page {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+}
+
+.higienismo-page .image-container {
+  flex: 1;
+}
+
+.higienismo-page .image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.higienismo-page .text-container {
+  flex: 1;
+}
+
+.higienismo-page .text-container h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.higienismo-page .text-container p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+}
+
+
+
+/* Estilos para la página de Salud */
+
+.salud-page {
+  position: relative;
+  height: 100vh;
+  background: url('assets/salud.jpg') center/cover no-repeat;
+  display: flex;
+  color: white;
+  padding: 20px;
+  text-align: left;
+}
+
+.salud-page .text-content {
+  max-width: 800px;
+  background: none;
+  padding: 20px;
+  border-radius: 0;
+  box-shadow: none;
+  margin-top: 200px; /* Baja el contenido 100px desde el header */
+}
+
+.salud-page h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.salud-page p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.salud-page h3 {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.salud-page ul {
+  list-style: disc;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.salud-page ul li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para la página de Testimonios */
+.testimonio-page {
+  position: relative;
+  height: 100vh;
+  background: url('assets/salud.jpg') center/cover no-repeat;
+  display: flex;
+  color: white;
+  padding: 20px;
+  text-align: left;
+}
+
+.testimonio-page .text-content {
+  max-width: 800px;
+  background: none;
+  padding: 20px;
+  border-radius: 0;
+  box-shadow: none;
+  margin-top: 200px; /* Baja el contenido 100px desde el header */
+}
+
+.testimonio-page h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.testimonio-page p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.testimonio-page h3 {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.testimonio-page ul {
+  list-style: disc;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.testimonio-page ul li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+
+
+
