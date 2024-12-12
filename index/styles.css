@@ -1,43 +1,44 @@
 /* General Styles */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-/* Ajustes al header */
-header {
-  background: transparent!;
-  padding: 10px 20px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-/* Menú a la derecha */
-nav ul {
-  list-style: none;
+*{
   margin: 0;
   padding: 0;
-  display: flex;
-  gap: 20px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
-nav ul li {
+header {
+  position: absolute; /* Posiciona el header sobre la imagen */
+  top: 0;
+  left: 0;
+  width: 100%; /* Abarca todo el ancho */
+  z-index: 10; /* Asegura que esté encima de la imagen */
+  display: flex; /* Usa flexbox para la alineación */
+  justify-content: space-between; /* Espacia elementos entre sí */
+  align-items: center; /* Centra verticalmente */
+  padding: 10px 20px; /* Añade espacio interno */
+}
+
+.header-left {
+  color: white; /* Asegura que el texto sea visible */
+  font-weight: bold;
+  font-size: 20px;
+}
+
+nav ul {
+  list-style: none; /* Elimina los puntos de la lista */
   margin: 0;
+  padding: 0;
+  display: flex; /* Alinea los elementos en línea */
+  gap: 20px; /* Espacio entre opciones */
 }
+
 nav ul li a {
   text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  font-size: 14px;
-}
-/* Nombre alineado a la izquierda */
-.header-left {
+  color: white; /* Asegura que el texto sea visible */
   font-weight: bold;
   font-size: 16px;
-  color: #333;
 }
+
+
 .hero {
   height: 100vh;
   background: url('assets/home.jpg') center/cover no-repeat;
@@ -47,7 +48,7 @@ nav ul li a {
 }
 .hero h1 {
   color: white;
-  font-size: 3rem;
+  font-size: 2rem;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
@@ -186,6 +187,124 @@ nav ul li a {
   margin-bottom: 10px;
 }
 
+/* Gallery Page Styles */
+.gallery-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+}
+
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.gallery-container img {
+  width: 60%; /* Reduce el tamaño de las imágenes */
+  max-height: 400px; /* Limita la altura máxima */
+  object-fit: cover; /* Ajusta cómo se recortan las imágenes */
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-page button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.gallery-page button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#prev {
+  left: 10px;
+}
+
+#next {
+  right: 10px;
+}
+
+/* contacto*/
+body.contact-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 101vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #aaaaaa;
+  color: #333;
+}
+
+main.contact-section {
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+}
+
+main.contact-section h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form label {
+  font-size: 16px;
+  text-align: left;
+}
+
+form input, form textarea, form button {
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form textarea {
+  resize: none;
+  height: 100px;
+}
+
+form button {
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #555;
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: gray;
+}
 
 
 

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="contact-page">
+  <header>
+    <a href="index.html" class="logo">Higienismo Integral</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="higienismo.html">¿Qué es el Higienismo?</a></li>
+        <li><a href="salud.html">La Salud como Arte y Ciencia</a></li>
+        <li><a href="testimonio.html">Testimonios</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="contacto.html" class="active">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contact-section">
+    <h1>Contáctanos</h1>
+    <p>Si tienes preguntas o deseas agendar una consulta, no dudes en escribirnos.</p>
+    <form>
+      <label for="name">Nombre (obligatorio)</label>
+      <div style="display: flex; gap: 10px;">
+        <input type="text" id="first-name" placeholder="Nombre" required>
+        <input type="text" id="last-name" placeholder="Apellido">
+      </div>
+
+      <label for="email">Correo Electrónico (obligatorio)</label>
+      <input type="email" id="email" placeholder="Tu Correo Electrónico" required>
+
+      <label for="subject">Asunto (obligatorio)</label>
+      <input type="text" id="subject" placeholder="Asunto" required>
+
+      <label for="message">Mensaje (obligatorio)</label>
+      <textarea id="message" placeholder="Escribe tu mensaje aquí" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Higienismo Integral. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
