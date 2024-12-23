@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galería</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
-        <div class="header-left">Mauricio Esteban</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="higienismo.html">¿Qué es el Higienismo?</a></li>
-                <li><a href="salud.html">La Salud como Arte y Ciencia</a></li>
-                <li><a href="testimonio.html">Testimonios</a></li>
-                <li><a href="galeria.html">Galería</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+<body class="galeria-page">
+    <!-- Encabezado -->
+    <header id="galeria-header" class="light">
+        <div class="header-inner">
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="index.html" class="active">MAURICIO ESTEBAN</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="higienismo.html">¿Qué es el higienismo?</a></li>
+                    <li><a href="salud.html">La Salud como Arte y Ciencia</a></li>
+                    <li><a href="testimonio.html">Testimonios</a></li>
+                    <li><a href="about.html">Acerca de</a></li>
+                    <li><a href="galeria.html" class="active">Galería</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main class="gallery-page">
-        <div class="gallery-container">
-            <button id="prev" class="gallery-button">❮</button>
-            <img id="gallery-image" src="assets/gal1.png" alt="Imagen de la galería">
-            <button id="next" class="gallery-button">❯</button>
+    <div class="gallery-container">
+        <div class="gallery-item" onclick="window.location.href='seminarios.html'">
+          <img src="assets/galeria1.jpg" alt="Galería Uno">
+          <div class="overlay-text">Seminarios</div>
         </div>
-    </main>
-
-    <script src="script.js"></script>
-
+        <div class="gallery-item" onclick="window.location.href='libros.html'">
+            <img src="assets/galeria2.jpg" alt="Galería Dos">
+            <div class="overlay-text">Libros</div>
+          </div>
+          <div class="gallery-item" onclick="window.location.href='Entrevistas.html'">
+            <img src="assets/galeria3.jpeg" alt="Galería Tres">
+            <div class="overlay-text">Entrevistas</div>
+          </div>
+        </div>
+            </div>
+        </main>
 </body>
 </html>
