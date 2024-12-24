@@ -1,54 +1,75 @@
-<!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto</title>
-  <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda una cita con Mauricio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="contact-page">
-  <header>
-    <a href="index.html" class="logo">Higienismo Integral</a>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="higienismo.html">¿Qué es el Higienismo?</a></li>
-        <li><a href="salud.html">La Salud como Arte y Ciencia</a></li>
-        <li><a href="testimonio.html">Testimonios</a></li>
-        <li><a href="about.html">Acerca de</a></li>
-        <li><a href="galeria.html">Galería</a></li>
-        <li><a href="contacto.html" class="active">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main class="contact-section">
-    <h1>Contáctanos</h1>
-    <p>Si tienes preguntas o deseas agendar una consulta, no dudes en escribirnos.</p>
-    <form>
-      <label for="name">Nombre (obligatorio)</label>
-      <div style="display: flex; gap: 10px;">
-        <input type="text" id="first-name" placeholder="Nombre" required>
-        <input type="text" id="last-name" placeholder="Apellido">
+<body>
+    <!-- Encabezado -->
+    <header id="main-header">
+        <nav class="header-nav">
+            <!-- Botón de menú hamburguesa -->
+            <button class="menu-toggle" aria-label="Abrir menú">
+                ☰
+            </button>
+            <ul class="menu">
+                <li><a href="index.html" class="active">MAURICIO ESTEBAN</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="higienismo.html">¿Qué es el higienismo?</a></li>
+                <li><a href="salud.html">La Salud como Arte y Ciencia</a></li>
+                <li><a href="testimonio.html">Testimonios</a></li>
+                <li><a href="about.html">Acerca de</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="contenedor-principal">
+      <!-- Texto e Imagen -->
+      <div class="texto-e-imagen">
+          <div class="texto">
+              <h1>Contáctanos</h1>
+              <p><em>Conecta con Mauricio Esteban y transforma tu vida.</em></p>
+              <p>
+                  Las personas pueden consultar a Mauricio Esteban sobre salud natural y el higienismo integral,
+                  especialmente en la prevención y sanación de enfermedades mediante la alimentación sana y natural,
+                  sin suplementos. Ofrece soluciones para casos complejos de salud, desde enfermedades crónicas hasta
+                  terminales, y orientación para mejorar el sistema inmunológico y prevenir enfermedades.
+              </p>
+              <p>
+                  Después de contactarlo, pueden esperar respuestas prácticas, basadas en su experiencia y en métodos
+                  comprobados, siempre enfocadas en mejorar la salud de manera natural y responsable.
+              </p>
+              <p><strong>higienismoh@gmail.com</strong></p>
+          </div>
+          <div class="imagen">
+              <img src="assets/home1.png" alt="Frutas saludables">
+          </div>
       </div>
 
-      <label for="email">Correo Electrónico (obligatorio)</label>
-      <input type="email" id="email" placeholder="Tu Correo Electrónico" required>
-
-      <label for="subject">Asunto (obligatorio)</label>
-      <input type="text" id="subject" placeholder="Asunto" required>
-
-      <label for="message">Mensaje (obligatorio)</label>
-      <textarea id="message" placeholder="Escribe tu mensaje aquí" required></textarea>
-
-      <button type="submit">Enviar</button>
-    </form>
-  </main>
-
-  <footer>
-    <p>&copy; 2024 Higienismo Integral. Todos los derechos reservados.</p>
-  </footer>
+      <!-- Formulario -->
+      <div class="formulario">
+          <form action="https://formsubmit.co/juandiego.gama11@gmail.com" method="POST">
+              <div class="input-group">
+                  <label for="nombre">Nombre (obligatorio)</label>
+                  <div class="input-duo">
+                      <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                      <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos">
+                  </div>
+              </div>
+              <div class="input-group">
+                  <label for="email">Correo electrónico (obligatorio)</label>
+                  <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+              </div>
+              <div class="input-group">
+                  <label for="mensaje">Mensaje (obligatorio)</label>
+                  <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí" required></textarea>
+              </div>
+              <button type="submit" class="btn">ENVIAR</button>
+          </form>
+      </div>
+  </div>
 </body>
 </html>

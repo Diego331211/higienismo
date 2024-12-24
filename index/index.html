@@ -6,112 +6,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agenda una cita con Mauricio</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <script src="script.js"></script>
 </head>
 <body>
     <!-- Encabezado -->
-    <header id="main-header" class="light">
-        <div class="header-inner container-fluid">
-            <nav class="header-nav">
-                <ul>
-                    <li><a href="index.html" class="active">MAURICIO ESTEBAN</a></li>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="higienismo.html">¿Qué es el higienismo?</a></li>
-                    <li><a href="salud.html">La Salud como Arte y Ciencia</a></li>
-                    <li><a href="testimonio.html">Testimonios</a></li>
-                    <li><a href="about.html">Acerca de</a></li>
-                    <li><a href="galeria.html">Galería</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header id="main-header">
+        <nav class="header-nav">
+            <!-- Botón de menú hamburguesa -->
+            <button class="menu-toggle" aria-label="Abrir menú">
+                ☰
+            </button>
+            <ul class="menu">
+                <li><a href="index.html" class="active">MAURICIO ESTEBAN</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="higienismo.html">¿Qué es el higienismo?</a></li>
+                <li><a href="salud.html">La Salud como Arte y Ciencia</a></li>
+                <li><a href="testimonio.html">Testimonios</a></li>
+                <li><a href="about.html">Acerca de</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <!--<div class="container">
-      <h1>Bienvenido</h1>
-      <p>Inicia sesión con Google para agendar una cita.</p>
-
-       Botón de Google Login 
-      <div id="g_id_onload"
-           data-client_id="897170356005-0gfkpot37f8trhks2s1gps1iif6j4boo.apps.googleusercontent.com"
-           data-callback="handleCredentialResponse">
-      </div>
-      <div class="g_id_signin" data-type="standard"></div>
-
-      <button id="scheduleButton" disabled>Agendar una cita</button>
-    </div>-->
-
+    
     <!-- Sección principal -->
     <main class="appointment-section">
-        <div class="text-container">
-            <h1>Agenda una cita con Mauricio Esteban</h1>
-            <p>
-                Mauricio continuó su formación en Alemania, donde estudió Higienismo con Franz Konz y Susan Rath en Stuttgart,
-                y en Cataluña, donde colaboró con Marc Ams y el Dr. Eneko Landaburu. En 1988, completó "El Bionexo 2: El Origen del Amor"
-                y "Por qué Todos Morimos Antes de Aprender a Amar", obras que precedieron sus estudios de Biología del Amor con Humberto Maturana
-                en la Universidad de Chile.
-            </p>
-        </div>
-
-        <section class="about-section">
-            <div class="about-container">
-                <div class="about-image">
-                    <img src="assets/home1.png" alt="Imagen de frutas y salud">
-                </div>
-                <div class="about-text">
-                    <h2>Más sobre Mauricio Esteban</h2>
-                    <p>
-                        En la consultoría de Mauricio Esteban, ofrecemos soluciones integrales enfocadas en transformar su salud y bienestar.
-                        Con más de cinco décadas de experiencia, contamos con un equipo comprometido en guiarlo hacia una vida más saludable,
-                        equilibrada y longeva, a través de métodos naturales y comprobados que optimizan su sistema inmunológico y restauran su
-                        vitalidad.
-                    </p>
-                    <a href="about.html" class="about-button">LEER MÁS</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="social-media-section">
-            <h2>Síguenos en las redes sociales</h2>
-            <div class="social-media-gallery">
-                <div class="gallery-item">
-                    <img src="assets/home2.png" alt="Frutas">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/home3.png" alt="Moras">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/home4.png" alt="Frutas mixtas">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/home5.png" alt="Arándanos">
-                </div>
-            </div>
-        </section>
-        
-
-        <!--<div class="appointment-container">
-            <h2>Elige la cita</h2>
-            <div class="appointment-options">
-                <div class="appointment-option">
-                    <h3>Consulta gratuita</h3>
-                    <p>30 minutos</p>
-                    <button class="book-button">Haz una reserva</button>
-                </div>
-                <div class="appointment-option">
-                    <h3>Servicio básico</h3>
-                    <p>1 hora @ 99,00 €</p>
-                    <button class="book-button">Haz una reserva</button>
-                </div>
-                <div class="appointment-option">
-                    <h3>Servicio avanzado</h3>
-                    <p>1 hora @ 199,00 €</p>
-                    <button class="book-button">Haz una reserva</button>
-                </div>
-            </div>
-        </div>-->
-
+        <h1>Agenda una cita con Mauricio Esteban</h1>
+        <p>
+            Mauricio continuó su formación en Alemania, donde estudió Higienismo con Franz Konz y Susan Rath en Stuttgart,
+            y en Cataluña, donde colaboró con Marc Ams y el Dr. Eneko Landaburu.
+        </p>
     </main>
 
+    <!-- Sección Acerca de -->
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="assets/home1.png" alt="Imagen de frutas y salud">
+            </div>
+            <div class="about-text">
+                <h2>Más sobre Mauricio Esteban</h2>
+                <p>
+                    En la consultoría de Mauricio Esteban, ofrecemos soluciones integrales enfocadas en transformar su salud y bienestar.
+                </p>
+                <a href="about.html" class="about-button">LEER MÁS</a>
+            </div>
+        </div>
+    </section>
 
+    <!-- Redes Sociales -->
+    <section class="social-media-section">
+        <h2>Síguenos en las redes sociales</h2>
+        <div class="social-media-gallery">
+            <div class="gallery-item">
+                <img src="assets/home2.png" alt="Frutas">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/home3.png" alt="Moras">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/home4.png" alt="Frutas mixtas">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/home5.png" alt="Arándanos">
+            </div>
+        </div>
+    </section>
+
+    <!-- Script para controlar el menú -->
+    <script>
+        // Seleccionar el botón de menú y el contenedor del menú
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+
+        // Agregar evento de clic para alternar el menú
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('show'); // Alternar clase "show"
+
+            // Cambiar el ícono del botón
+            if (menu.classList.contains('show')) {
+                menuToggle.textContent = '✖'; // Cambiar a "X" para cerrar
+            } else {
+                menuToggle.textContent = '☰'; // Cambiar a hamburguesa
+            }
+        });
+    </script>
+</body>
+</html>

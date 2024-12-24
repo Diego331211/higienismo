@@ -1,89 +1,149 @@
 /* General Styles */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto';
-    line-height: 1.6;
-    color: #000000;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto';
+  line-height: 1.6;
+  color: #000000;
 }
 
 /* Header Styles */
 
 /* Estilo general del header */
 header {
-  display: flex;
-  justify-content: space-between; /* Espacia el contenido */
-  align-items: center; /* Alinea verticalmente */
-  padding: 30px 50px;
-  width: 100%;
-  z-index: 1000;
+display: flex;
+justify-content: space-between; /* Espacia el contenido */
+align-items: center; /* Alinea verticalmente */
+padding: 30px 50px;
+width: 100%;
+z-index: 1000;
 }
+
 
 /* Estilo del contenedor interno del header */
 .header-inner {
-  display: flex;
-  justify-content: space-between; /* Espacia el título y el menú */
-  align-items: center;
-  width: 100%;
+display: flex;
+justify-content: space-between; /* Espacia el título y el menú */
+align-items: center;
+width: 100%;
 }
 
 /* Estilo del menú de navegación */
 .header-nav ul {
-  list-style: none; /* Elimina puntos de lista */
-  display: flex; /* Alinea opciones en fila */
-  gap: 20px; /* Espacio entre opciones */
-  margin: 0;
-  padding: 0;
+list-style: none; /* Elimina puntos de lista */
+display: flex; /* Alinea opciones en fila */
+gap: 20px; /* Espacio entre opciones */
+margin: 0;
+padding: 0;
 }
 
 .header-nav ul li a {
-  text-decoration: none; /* Elimina subrayado */
-  font-size: 0.7rem; /* Tamaño de texto */
-  font-family: 'Arial', sans-serif; /* Fuente personalizada */
-  color: black; /* Color negro */
-  transition: color 0.3s ease; /* Efecto al pasar el mouse */
+font-size: 0.7rem; /* Tamaño de texto */
+font-family: 'Arial', sans-serif; /* Fuente personalizada */
+color: black; /* Color negro */
+transition: color 0.3s ease; /* Efecto al pasar el mouse */
 }
 
 .header-nav ul li a.active {
-  text-decoration: underline; /* Subraya la opción activa */
+text-decoration: underline; /* Subraya la opción activa */
 }
 
 .header-nav ul li {
-  margin-top: 0px; /* Baja ligeramente las opciones */
+margin-top: 0px; /* Baja ligeramente las opciones */
 }
 
 /* Ajuste especial para "MAURICIO ESTEBAN" */
 .header-nav ul li:first-child a {
-  font-size: 1.7rem; /* Tamaño más grande */
-  margin-right: 175px; /* Espacio extra hacia la derecha */
-  color: black;
-  text-decoration: none; /* Elimina el subrayado */
+font-size: 1.7rem; /* Tamaño más grande */
+margin-right: 105px; /* Espacio extra hacia la derecha */
+color: rgb(5, 5, 5);
+text-decoration: none; /* Elimina el subrayado */
 }
 
 /* APPOINTMENT SECTION */ /*HOME*/
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #000000;
+}
 
+/* Encabezado */
+header {
+  position: sticky; /* Alternativamente, usa fixed si quieres que siempre esté visible */
+  top: 0; /* Fija el header al inicio de la página */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  width: 100%;
+  z-index: 1000;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.header-nav .menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav .menu li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+      display: block;
+  }
+
+  .header-nav .menu {
+      display: none;
+      flex-direction: column;
+      background: white;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+  }
+
+  .header-nav .menu.show {
+      display: flex;
+  }
+}
+
+/* Sección principal */
 .appointment-section {
   max-width: 1200px;
   margin: 50px auto;
   padding: 20px;
-  font-family: 'Roboto'; /* Asegura que Roboto se aplique aquí también */
-  font-weight: 400; /* Peso regular */
-  color: #000000; /* Color de texto */
-  line-height: 1.6; /* Mejora la legibilidad */
+  text-align: center;
 }
 
 .appointment-section h1 {
-  font-weight: 400; /* Aplica negrita al título */
-  font-size: 3rem; /* Ajusta el tamaño del título */
-  margin-bottom: 20px; /* Espaciado inferior */
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 20px;
 }
 
 .appointment-section p {
-  font-weight: 400; /* Regular para párrafos */
-  font-size: 1rem; /* Ajusta el tamaño de texto */
-  margin-top: 0; /* Elimina márgenes superiores */
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
 }
 
+/* Sección "Acerca de" */
 .about-section {
   max-width: 1200px;
   margin: 50px auto;
@@ -92,307 +152,252 @@ header {
 
 .about-container {
   display: flex;
-  flex-wrap: wrap; /* Asegura que sea responsivo */
+  flex-wrap: wrap;
   gap: 20px;
   align-items: center;
   justify-content: space-between;
 }
 
 .about-image img {
-  width: 100%; /* Se ajusta automáticamente al contenedor */
-  max-width: 500px; /* Tamaño máximo de la imagen */
-  border-radius: 8px; /* Bordes redondeados opcionales */
-  object-fit: cover; /* Asegura que la imagen mantenga proporciones */
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
 }
 
 .about-text {
   flex: 1;
-  max-width: 600px; /* Ancho máximo para el texto */
 }
 
 .about-text h2 {
-  font-size: 3rem;
-  font-weight: 400;
-  margin-bottom: 20px;
-}
-
-.about-text p {
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.6;
-  margin-bottom: 30px;
-  color: #000000; /* Color del texto */
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  margin-bottom: 15px;
 }
 
 .about-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #000; /* Fondo negro */
-  color: #fff; /* Texto blanco */
+  background-color: #000;
+  color: #fff;
   text-decoration: none;
-  border-radius: 100px; /* Bordes redondeados */
-  font-size: 0.85rem;
-  font-weight: 400;
+  border-radius: 100px;
+  font-size: 1rem;
   transition: background-color 0.3s ease;
 }
 
 .about-button:hover {
-  background-color: #555; /* Cambio de color en hover */
+  background-color: #555;
 }
 
-/* Estilo para la sección de redes sociales */
+/* Galería de redes sociales */
 .social-media-section {
   text-align: center;
   margin: 50px auto;
   padding: 20px;
-  max-width: 1200px;
 }
 
-.social-media-section h2 {
-  font-weight: 400; /* Aplica negrita al título */
-  font-size: 3rem;
-  margin-bottom: 30px;
-  color: #000000;
-  font-family: 'Roboto', sans-serif;
+.social-media-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
 }
+
+.social-media-gallery .gallery-item img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.social-media-gallery .gallery-item img:hover {
+  transform: scale(1.05);
+}
+
 
 /* Galería de imágenes */
 .social-media-gallery {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px; /* Espacio entre imágenes */
-  flex-wrap: wrap; /* Permite que las imágenes se acomoden en varias filas */
+display: flex;
+justify-content: space-between;
+gap: 20px; /* Espacio entre imágenes */
+flex-wrap: wrap; /* Permite que las imágenes se acomoden en varias filas */
 }
 
 /* Cada elemento de la galería */
 .gallery-item {
-  flex: 1;
-  min-width: calc(25% - 20px); /* Ajusta el ancho relativo para 4 imágenes por fila */
-  box-sizing: border-box;
-  overflow: hidden;
-  border-radius: 7px; /* Bordes redondeados */
+flex: 1;
+min-width: calc(25% - 20px); /* Ajusta el ancho relativo para 4 imágenes por fila */
+box-sizing: border-box;
+overflow: hidden;
+border-radius: 7px; /* Bordes redondeados */
 }
 
 .gallery-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: transform 0.3s ease; /* Efecto al pasar el mouse */
+width: 100%;
+height: auto;
+display: block;
+transition: transform 0.3s ease; /* Efecto al pasar el mouse */
 }
 
 .gallery-item img:hover {
-  transform: scale(1.05); /* Amplía ligeramente al pasar el mouse */
+transform: scale(1.05); /* Amplía ligeramente al pasar el mouse */
 }
 
 
 /*PESTAÑA ¿QUE ES EL HIGIENISMO?*/
 
-/* Estilo específico para el header de esta página */
-#main-header.light {
-  display: flex;
-  justify-content: space-between; /* Espacia el contenido */
-  align-items: center; /* Alinea verticalmente */
-  padding: 20px 50px;
-  width: 100%;
-  z-index: 1000;
-  position: absolute; /* El header se superpone a la imagen */
-  top: 0;
-  left: 0;
-  background: transparent; /* Fondo transparente */
-  color: white; /* Texto blanco */
-}
-
-/* Estilo específico para el menú de navegación */
-#main-header.light .header-nav ul {
-  list-style: none; /* Elimina puntos de lista */
-  display: flex; /* Alinea las opciones en fila */
-  gap: 20px; /* Espacio entre las opciones */
-  margin: 0;
-  padding: 0;
-}
-
-#main-header.light .header-nav ul li a {
-  text-decoration: none; /* Elimina subrayado */
-  font-size: 1rem; /* Tamaño del texto */
-  font-weight: normal; /* Texto normal */
-  font-family: 'Roboto', sans-serif; /* Fuente personalizada */
-  color: rgb(0, 0, 0); /* Texto blanco */
-  transition: color 0.3s ease; /* Efecto al pasar el mouse */
-}
-
-#main-header.light .header-nav ul li a:hover {
-  color: #000000; /* Color al pasar el mouse */
-}
-
-#main-header.light .header-nav ul li a.active {
-  text-decoration: underline; /* Subraya la opción activa */
-}
-
-/* Ajuste especial para "MAURICIO ESTEBAN" */
-#main-header.light .header-nav ul li:first-child a {
-  font-size: 1.7rem; /* Tamaño más grande */
-  margin-right: 175px; /* Espacio extra hacia la derecha */
-  color: rgb(0, 0, 0); /* Texto blanco */
-  text-decoration: none; /* Elimina el subrayado */
-}
-
 /* Estilo específico para la sección hero */
 .hero {
-  background: url('assets/que.jpg') no-repeat center center/cover;
-  height: 100vh; /* Ocupa toda la altura de la ventana */
-  display: flex;
-  justify-content: center; /* Centra horizontalmente el contenido */
-  position: relative; /* Relativo para z-index */
+background: url('assets/que.jpg') no-repeat center center/cover;
+height: 100vh; /* Ocupa toda la altura de la ventana */
+display: flex;
+justify-content: center; /* Centra horizontalmente el contenido */
+position: relative; /* Relativo para z-index */
 }
 
 .hero .hero-content h1 {
-  font-size: 4rem; /* Tamaño del título */
-  font-family: 'Roboto', sans-serif; /* Fuente personalizada */
-  color: rgb(255, 255, 255); /* Texto blanco */
-  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.7); /* Sombra para contraste */
-  margin: 100px 0 0 0;
+font-size: 4rem; /* Tamaño del título */
+font-family: 'Roboto', sans-serif; /* Fuente personalizada */
+color: rgb(255, 255, 255); /* Texto blanco */
+text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.7); /* Sombra para contraste */
+margin: 100px 0 0 0;
 }
 
 .info-section {
-  padding: 50px 10%;
-  background-color: #ffffff;
+padding: 50px 10%;
+background-color: #ffffff;
 }
 
 .info-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 30px;
 }
 
 .info-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px; /* Bordes redondeados opcionales */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+max-width: 100%;
+height: auto;
+border-radius: 10px; /* Bordes redondeados opcionales */
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra opcional */
 }
 
 .info-text {
-  flex: 1;
-  color: #333;
+flex: 1;
+color: #333;
 }
 
 .info-text h2 {
-  font-family: 'Roboto', sans-serif;
-  font-size: 2rem;
-  margin-bottom: 20px;
-  font-weight: 700;
-  color: #222; /* Color del título */
+font-family: 'Roboto', sans-serif;
+font-size: 2rem;
+margin-bottom: 20px;
+font-weight: 700;
+color: #222; /* Color del título */
 }
 
 .info-text p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
-  line-height: 1.8;
-  color: #000000;
+font-family: 'Roboto', sans-serif;
+font-size: 1rem;
+line-height: 1.8;
+color: #000000;
 }
 
 .text-overlay-section {
-  position: relative;
-  background-image: url('assets/que2.svg'); /* Asegúrate de que el archivo de imagen esté en el mismo directorio o ajusta la ruta */
-  background-size: contain;
-  background-position: no-repeat;
-  background-position: center; /* Centra la imagen */
-  height: 100vh; /* Ajusta la altura según lo necesites */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  color: white; /* Color del texto */
+position: relative;
+background-image: url('assets/que2.svg'); /* Asegúrate de que el archivo de imagen esté en el mismo directorio o ajusta la ruta */
+background-size: contain;
+background-position: no-repeat;
+background-position: center; /* Centra la imagen */
+height: 100vh; /* Ajusta la altura según lo necesites */
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 20px;
+color: white; /* Color del texto */
 }
 
 .text-overlay-content {
-  max-width: 800px;
-  text-align: center;
-  padding: 20px;
+max-width: 800px;
+text-align: center;
+padding: 20px;
 }
 
 .text-overlay-content p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
-  line-height: 1.4;
-  margin: 0;
+font-family: 'Roboto', sans-serif;
+font-size: 1rem;
+line-height: 1.4;
+margin: 0;
 }
 
 /*<<<<<<<<<<<<<<<<<<<< La salud como arte y ciencia >>>>>>>>>>>>>>>>>>>>>*/
 
 body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  color: #000000;
+margin: 0;
+font-family: 'Roboto', sans-serif;
+color: #000000;
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 50px;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 1000;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 30px 50px;
+width: 100%;
+position: fixed;
+top: 0;
+z-index: 1000;
 }
 
 .header-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
+list-style: none;
+display: flex;
+gap: 20px;
+margin: 0;
+padding: 0;
 }
 
 .header-nav ul li a {
-  text-decoration: none;
-  font-size: 1rem;
-  color: black;
-  transition: color 0.3s ease;
+text-decoration: none;
+font-size: 1rem;
+color: black;
+transition: color 0.3s ease;
 }
 
-.header-nav ul li a.active {
-  text-decoration: underline;
-}
+
 
 /* Sección de fondo con texto */
 .science-section {
-  background-image: url('assets/salud1.jpg'); /* Ruta de la imagen */
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  padding: 50px;
-  color: black;
+background-image: url('assets/salud1.jpg'); /* Ruta de la imagen */
+background-size: cover;
+background-position: center;
+height: 100vh;
+display: flex;
+padding: 50px;
+color: black;
 }
 
 .science-content {
-  padding: 20px;
-  text-align: left;
-  max-width: 700px;
-  margin-top: 200px; /* Baja el texto */
+padding: 20px;
+text-align: left;
+max-width: 700px;
+margin-top: 200px; /* Baja el texto */
 }
 
 .science-content h1 {
-  font-size: 1.8rem;
-  font-weight: 400;
-  margin-bottom: 15px;
+font-size: 1.8rem;
+font-weight: 400;
+margin-bottom: 15px;
 }
 
 .science-content p {
-  font-size: 1rem;
-  margin-bottom: 20px;
+font-size: 1rem;
+margin-bottom: 20px;
 }
 
 .science-content ul {
-  list-style: disc;
-  padding-left: 20px;
+list-style: disc;
+padding-left: 20px;
 }
 
 .science-content ul li {
-  margin-bottom: 10px;
+margin-bottom: 10px;
 }
 
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<TESTIMONIOS>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -400,559 +405,836 @@ header {
 /* Estilo específico para el header de testimonios */
 
 #testimonios-header.light {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-  width: 100%;
-  z-index: 1000;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: transparent;
-  color: rgb(0, 0, 0);
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 50px;
+width: 100%;
+z-index: 1000;
+position: absolute;
+top: 0;
+left: 0;
+background: transparent;
+color: rgb(0, 0, 0);
 }
 
 #testimonios-header.light .header-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
+list-style: none;
+display: flex;
+gap: 20px;
+margin: 0;
+padding: 0;
 }
 
 #testimonios-header.light .header-nav ul li a {
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: 'Roboto', sans-serif;
-  color: rgb(0, 0, 0);
-  transition: color 0.3s ease;
+text-decoration: none;
+font-size: 1rem;
+font-family: 'Roboto', sans-serif;
+color: rgb(0, 0, 0);
+transition: color 0.3s ease;
 }
 
 #testimonios-header.light .header-nav ul li a.active {
-  text-decoration: underline;
-  font-weight: bold;
+text-decoration: underline;
+font-weight: bold;
 }
 
 #testimonios-header.light .header-nav ul li a:hover {
-  color: #ddd;
+color: #ddd;
 }
 
 /* Fondo y estructura principal */
 .background-image {
-  background-image: url('assets/testomonio.jpg');
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 50px;
+background-image: url('assets/testomonio.jpg');
+background-size: cover;
+background-position: center;
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: flex-start;
+padding: 90px;
 }
 
 .text-content {
-  background: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
-  color: white;
-  padding: 30px;
-  border-radius: 8px;
-  width: 100%;
-  max-width: 1200px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
-  gap: 30px; /* Espacio entre columnas */
+background: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+color: white;
+padding: 30px;
+border-radius: 8px;
+width: 100%;
+max-width: 1200px;
+display: grid;
+grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
+gap: 30px; /* Espacio entre columnas */
 }
 
 .text-content h1 {
-  font-size: 2.5rem;
-  grid-column: span 3; /* El título ocupa las tres columnas */
-  margin-bottom: 20px;
-  text-align: center; /* Centrar el título */
+font-size: 2.5rem;
+grid-column: span 3; /* El título ocupa las tres columnas */
+margin-bottom: 20px;
+text-align: center; /* Centrar el título */
 }
 
 .text-content p,
 .text-content ul {
-  font-size: 1rem;
-  line-height: 1.6;
+font-size: 1rem;
+line-height: 1.6;
 }
 
 .text-content .column {
-  display: flex;
-  flex-direction: column;
-  gap: 15px; /* Espacio entre elementos de cada columna */
+display: flex;
+flex-direction: column;
+gap: 15px; /* Espacio entre elementos de cada columna */
 }
 
 .text-content .column.full {
-  grid-column: span 3; /* Columna que ocupa todo el ancho */
+grid-column: span 3; /* Columna que ocupa todo el ancho */
 }
 
 .text-content h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+font-size: 1.5rem;
+margin-bottom: 10px;
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
-  .text-content {
-    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
-  }
+.text-content {
+  grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+}
 
-  .text-content h1 {
-    font-size: 2rem; /* Reducir tamaño del título */
-  }
+.text-content h1 {
+  font-size: 2rem; /* Reducir tamaño del título */
+}
 }
 
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< ABBOUT US >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
 /* Estilo específico para el header en la página "Acerca de" */
 .acerca-page #acerca-header.light {
-  display: flex;
-  justify-content: space-between; /* Espacia el contenido */
-  align-items: center; /* Alinea verticalmente */
-  padding: 20px 50px;
-  width: 100%;
-  z-index: 1000;
-  position: absolute; /* Posiciona sobre la imagen */
-  top: 0;
-  left: 0;
-  background: transparent; /* Fondo transparente */
-  color: rgb(0, 0, 0); /* Texto blanco */
+display: flex;
+justify-content: space-between; /* Espacia el contenido */
+align-items: center; /* Alinea verticalmente */
+padding: 20px 50px;
+width: 100%;
+z-index: 1000;
+position: absolute; /* Posiciona sobre la imagen */
+top: 0;
+left: 0;
+background: transparent; /* Fondo transparente */
+color: rgb(0, 0, 0); /* Texto blanco */
 }
 
 /* Estilo para el menú de navegación */
 .acerca-page #acerca-header.light .header-nav ul {
-  list-style: none; /* Elimina puntos de lista */
-  display: flex; /* Alinea las opciones en fila */
-  gap: 20px; /* Espacio entre opciones */
-  margin: 0;
-  padding: 0;
+list-style: none; /* Elimina puntos de lista */
+display: flex; /* Alinea las opciones en fila */
+gap: 20px; /* Espacio entre opciones */
+margin: 0;
+padding: 0;
 }
 
 /* Fondo y estructura principal */
 .background-image2 {
-  background-image: url('assets/testimonio2.svg');
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 50px;
+background-image: url('assets/testimonio2.svg');
+background-size: cover;
+background-position: center;
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: flex-start;
+padding: 50px;
 }
 
 .acerca-page #acerca-header.light .header-nav ul li a {
-  text-decoration: none; /* Elimina subrayado */
-  font-size: 1rem; /* Tamaño del texto */
-  font-family: 'Roboto', sans-serif; /* Fuente personalizada */
-  color: rgb(0, 0, 0); /* Texto blanco */
-  transition: color 0.3s ease; /* Efecto de transición al pasar el mouse */
+text-decoration: none; /* Elimina subrayado */
+font-size: 1rem; /* Tamaño del texto */
+font-family: 'Roboto', sans-serif; /* Fuente personalizada */
+color: rgb(0, 0, 0); /* Texto blanco */
+transition: color 0.3s ease; /* Efecto de transición al pasar el mouse */
 }
 
 .acerca-page #acerca-header.light .header-nav ul li a.active {
-  text-decoration: underline; /* Subraya la opción activa */
-  font-weight: bold;
+text-decoration: underline; /* Subraya la opción activa */
+font-weight: bold;
 }
 
 .acerca-page #acerca-header.light .header-nav ul li a:hover {
-  color: #ffffff; /* Cambia a un gris claro al pasar el mouse */
+color: #ffffff; /* Cambia a un gris claro al pasar el mouse */
 }
 
 /* Ajuste especial para "MAURICIO ESTEBAN" */
 .acerca-page #acerca-header.light .header-nav ul li:first-child a {
-  font-size: 1.7rem; /* Tamaño más grande */
-  margin-right: 175px; /* Espacio extra hacia la derecha */
-  color: rgb(0, 0, 0);
-  text-decoration: none; /* Elimina el subrayado */
+font-size: 1.7rem; /* Tamaño más grande */
+margin-right: 175px; /* Espacio extra hacia la derecha */
+color: rgb(0, 0, 0);
+text-decoration: none; /* Elimina el subrayado */
 }
 
 
 /* Estilo para el contenedor principal */
 .content-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px; /* Espacio entre texto e imagen */
-  width: 100%;
-  max-width: 1200px; /* Ajuste al ancho deseado */
-  margin: 0 auto; /* Centrado horizontal */
-  padding: 50px;
-  color: rgb(0, 0, 0); /* Color del texto */
-  font-family: 'Roboto', sans-serif;
-  border-radius: 10px; /* Bordes redondeados */
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+gap: 20px; /* Espacio entre texto e imagen */
+width: 100%;
+max-width: 1200px; /* Ajuste al ancho deseado */
+margin: 0 auto; /* Centrado horizontal */
+padding: 50px;
+color: rgb(0, 0, 0); /* Color del texto */
+font-family: 'Roboto', sans-serif;
+border-radius: 10px; /* Bordes redondeados */
 }
 
 /* Estilo para la sección de texto */
 .text-section {
-  flex: 2; /* Ocupa más espacio */
-  padding-right: 20px; /* Espaciado interno a la derecha */
+flex: 2; /* Ocupa más espacio */
+padding-right: 20px; /* Espaciado interno a la derecha */
 }
 
 .text-section h1 {
-  font-size: 2.5rem; /* Tamaño ajustado */
-  margin-bottom: 20px;
+font-size: 2.5rem; /* Tamaño ajustado */
+margin-bottom: 20px;
 }
- 
+
 .text-section p {
-  font-weight: 400; /* Peso más ligero */
-  font-size: 1.1rem; /* Tamaño de fuente */
-  line-height: 1.6; /* Espaciado entre líneas */
-  margin-bottom: 15px;
+font-weight: 400; /* Peso más ligero */
+font-size: 1.1rem; /* Tamaño de fuente */
+line-height: 1.6; /* Espaciado entre líneas */
+margin-bottom: 15px;
 }
 
 /* Estilo para la sección de imagen */
 .image-section {
-  flex: 1; /* Ocupa menos espacio */
+flex: 1; /* Ocupa menos espacio */
 }
 
 .image-section img {
-  width: auto;
-  height: 20%;
-  border-radius: 8px; /* Bordes redondeados */
-  object-fit: cover;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para la imagen */
+width: auto;
+height: 20%;
+border-radius: 8px; /* Bordes redondeados */
+object-fit: cover;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para la imagen */
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
-  .content-wrapper {
-    flex-direction: column; /* Cambiar a diseño vertical */
-    gap: 30px;
-  }
+.content-wrapper {
+  flex-direction: column; /* Cambiar a diseño vertical */
+  gap: 30px;
+}
 
-  .text-section {
-    padding-right: 0; /* Eliminar padding en diseño vertical */
-  }
+.text-section {
+  padding-right: 0; /* Eliminar padding en diseño vertical */
+}
 
-  .text-section h1 {
-    font-size: 2rem; /* Reducir tamaño del título */
-  }
+.text-section h1 {
+  font-size: 2rem; /* Reducir tamaño del título */
+}
 
-  .text-section p {
-    font-size: 1rem; /* Reducir tamaño del texto */
-  }
+.text-section p {
+  font-size: 1rem; /* Reducir tamaño del texto */
+}
 }
 
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< GALERIA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
 /* Estilo específico para el header de la galería */
 #galeria-header.light {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-  width: 100%;
-  z-index: 1000;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: transparent; /* Fondo transparente para que la imagen de fondo sea visible */
-  color: rgb(0, 0, 0);
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 50px;
+width: 100%;
+z-index: 1000;
+position: absolute;
+top: 0;
+left: 0;
+background: transparent; /* Fondo transparente para que la imagen de fondo sea visible */
+color: rgb(0, 0, 0);
 }
 
 #galeria-header.light .header-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px; /* Espaciado entre los elementos del menú */
-  margin: 0;
-  padding: 0;
+list-style: none;
+display: flex;
+gap: 20px; /* Espaciado entre los elementos del menú */
+margin: 0;
+padding: 0;
 }
 
 #galeria-header.light .header-nav ul li a {
-  font-size: 1rem;
-  font-family: 'Roboto', sans-serif;
-  color: rgb(6, 6, 6);
-  transition: color 0.3s ease;
+font-size: 1rem;
+font-family: 'Roboto', sans-serif;
+color: rgb(6, 6, 6);
+transition: color 0.3s ease;
 }
 
 #galeria-header.light .header-nav ul li a.active {
-  text-decoration: underline; /* Subraya el enlace activo */
-  font-weight: bold;
+text-decoration: underline; /* Subraya el enlace activo */
+font-weight: bold;
 }
 #galeria-header.light .header-nav ul li:first-child a {
-  font-size: 1.5rem; /* Ajusta el tamaño si es necesario */
-  font-weight: bold; /* Negrita */
-  text-decoration: none; /* Elimina el subrayado */
-  color: rgb(0, 0, 0); /* Color negro o el que prefieras */
+font-size: 1.5rem; /* Ajusta el tamaño si es necesario */
+font-weight: bold; /* Negrita */
+text-decoration: none; /* Elimina el subrayado */
+color: rgb(0, 0, 0); /* Color negro o el que prefieras */
 }
 
 
 #galeria-header.light .header-nav ul li a:hover {
-  color: #000000; /* Color claro al pasar el cursor */
+color: #000000; /* Color claro al pasar el cursor */
 }
 
 /* Responsivo para el header */
 @media (max-width: 768px) {
-  #galeria-header.light {
-    padding: 15px 20px;
-  }
+#galeria-header.light {
+  padding: 15px 20px;
+}
 
-  #galeria-header.light .header-nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
+#galeria-header.light .header-nav ul {
+  flex-direction: column;
+  gap: 10px;
+}
 
-  #galeria-header.light .header-nav ul li a {
-    font-size: 0.9rem; /* Reduce el tamaño en pantallas pequeñas */
-  }
+#galeria-header.light .header-nav ul li a {
+  font-size: 0.9rem; /* Reduce el tamaño en pantallas pequeñas */
+}
 }
 
 /* Sección de galería */
 .gallery-section {
-  width: 100%;
-  max-width: 1200px;
+width: 100%;
+max-width: 1200px;
 }
 
 .gallery-container {
-  display: flex;
-  justify-content: center; /* Centra las imágenes horizontalmente */
-  align-items: flex-start;
-  gap: 20px; /* Espaciado entre las imágenes */
-  margin-top: 200px; /* Baja las imágenes */
-  padding: 20px;
+display: flex;
+justify-content: center; /* Centra las imágenes horizontalmente */
+align-items: flex-start;
+gap: 20px; /* Espaciado entre las imágenes */
+margin-top: 200px; /* Baja las imágenes */
+padding: 20px;
 }
 
 .gallery-item {
-  width: 300px; /* Ancho uniforme para todas las imágenes */
-  height: 200px; /* Alto uniforme */
-  overflow: hidden; /* Oculta contenido que exceda el contenedor */
-  position: relative;
-  cursor: pointer;
+width: 300px; /* Ancho uniforme para todas las imágenes */
+height: 200px; /* Alto uniforme */
+overflow: hidden; /* Oculta contenido que exceda el contenedor */
+position: relative;
+cursor: pointer;
 }
 
 .gallery-item:hover {
-  transform: scale(1.05);
-  
+transform: scale(1.05);
+
 }
 
 .gallery-item img {
-  width: 100%; /* Ajusta la imagen al ancho del contenedor */
-  height: 100%; /* Ajusta la imagen al alto del contenedor */
-  object-fit: cover; /* Recorta y ajusta la imagen para que encaje perfectamente */
-  transition: transform 0.3s ease; /* Animación suave al pasar el cursor */
+width: 100%; /* Ajusta la imagen al ancho del contenedor */
+height: 100%; /* Ajusta la imagen al alto del contenedor */
+object-fit: cover; /* Recorta y ajusta la imagen para que encaje perfectamente */
+transition: transform 0.3s ease; /* Animación suave al pasar el cursor */
 }
 
 .gallery-item .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0, 0, 0, 0.6);
+display: flex;
+justify-content: center;
+align-items: center;
+opacity: 0;
+transition: opacity 0.3s ease;
 }
 
 /* Texto superpuesto */
 .gallery-item .overlay-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: white;
+font-size: 1.5rem;
+font-weight: bold;
+text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+opacity: 0;
+transition: opacity 0.3s ease;
 }
 
 
 
 .gallery-item:hover img {
-  opacity: 0.8;
+opacity: 0.8;
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
-  .gallery-container {
-      grid-template-columns: 1fr;
-  }
+.gallery-container {
+    grid-template-columns: 1fr;
+}
 }
 
 .gallery-item:hover .overlay-text {
-  opacity: 1; /* Muestra el texto al pasar el cursor */
+opacity: 1; /* Muestra el texto al pasar el cursor */
 }
 
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<SEMINARIOS>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
 
 
-/* Header exclusivo para Seminarios */
-#seminarios-header.light {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-  width: 100%;
-  z-index: 1000;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: transparent;
-  color: white;
-}
-
-#seminarios-header.light .header-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
-}
-
-#seminarios-header.light .header-nav ul li a {
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: 'Roboto', sans-serif;
-  color: white;
-  transition: color 0.3s ease;
-}
-
-#seminarios-header.light .header-nav ul li a.active {
-  text-decoration: underline;
-  font-weight: bold;
-}
-
-#seminarios-header.light .header-nav ul li a:hover {
-  color: #ddd;
-}
-
 /* Imagen de fondo con texto centrado */
 .background-header {
-  background-image: url('assets/seminarios-background.jpg'); /* Imagen específica para esta sección */
-  background-size: cover;
-  background-position: center;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  color: rgb(0, 0, 0);
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-}
-
-.background-header .overlay {
-  background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.background-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+background-image: url('assets/galeria1.1.png'); /* Imagen específica para esta sección */
+background-size: cover;
+background-position: center;
+height: 500px;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+color: rgb(0, 0, 0);
+text-align: center;
+font-family: 'Roboto', sans-serif;
+margin-top: 0px;
 }
 
 .background-header p {
-  font-size: 1.2rem;
+font-size: 1.2rem;
+margin-top: 800px;
+text-align: justify; /* Justifica el texto */
+  max-width: 600px; /* Limita el ancho del texto */
+  font-size: 1.1rem; /* Tamaño de fuente adecuado */
+  line-height: 1.3; /* Espaciado entre líneas */
+  font-family: 'Roboto', sans-serif; /* Fuente consistente */
+  color: #000; /* Color del texto */
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
-  #seminarios-header.light {
-      padding: 15px 20px;
-  }
+#seminarios-header.light {
+    padding: 15px 20px;
+}
 
-  #seminarios-header.light .header-nav ul {
-      flex-direction: column;
-      gap: 10px;
-  }
+#seminarios-header.light .header-nav ul {
+    flex-direction: column;
+    gap: 10px;
+}
 
-  #seminarios-header.light .header-nav ul li a {
-      font-size: 0.9rem; /* Reduce el tamaño en pantallas pequeñas */
-  }
+#seminarios-header.light .header-nav ul li a {
+    font-size: 0.9rem; /* Reduce el tamaño en pantallas pequeñas */
+}
 
-  .background-header h1 {
-      font-size: 2rem;
-  }
+.background-header h1 {
+    font-size: 2rem;
+}
 
-  .background-header p {
-      font-size: 1rem;
-  }
+.background-header p {
+    font-size: 1rem;
+}
 }
 
 
 /* Galería */
-.gallery-section {
-  padding: 50px;
-  display: flex;
-  justify-content: center;
-}
 
+/* Contenedor de la galería */
 .gallery-container {
   display: flex;
-  justify-content: center;
-  gap: 20px;
   flex-wrap: wrap;
-  max-width: 1200px;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  gap: 20px; /* Espacio entre las imágenes */
+  padding: 20px; /* Espaciado interno */
+  max-width: 1200px; /* Ancho máximo de la galería */
+  margin: 0 auto; /* Centrar la galería */
+  margin-top: 260px; /* Cambia este valor */
 }
 
-.gallery-item {
-  width: 300px;
-  height: 200px;
-  overflow: hidden;
-  border-radius: 8px;
-  position: relative;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.gallery-item:hover img {
-  transform: scale(1.1);
+/* Imágenes de la galería */
+.gallery-container img {
+  width: 560px; /* Ocupa todo el espacio disponible */
+  height: 400px; /* Mantiene la proporción */
+  object-fit: cover; /* Asegura que la imagen se ajuste al contenedor */
+  border: none;
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
-  .gallery-item {
-      width: 100%;
-      height: auto;
+.gallery-item {
+    width: 100%;
+    height: auto;
+}
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  header {
+      flex-wrap: wrap;
+      padding: 10px;
+  }
+
+  .header-nav ul {
+      justify-content: center;
+      gap: 10px;
+  }
+
+  .appointment-section p {
+      font-size: 0.9rem;
+  }
+
+  .about-section {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .about-text {
+      text-align: center;
   }
 }
+
+.button-container {
+  text-align: right;
+  margin-right: 50px; /* Ajusta el margen para posicionar el botón */
+  margin-top: -100px;
+}
+
+.custom-button {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 10px 40px;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #333; /* Cambia ligeramente el tono al pasar el cursor */
+  transform: scale(1.05); /* Amplía ligeramente el botón */
+}
+
+/*<<<<<<<<<<<<<<<<<<<  libros >>>>>>>>>>>>>*/
+
+.libros p {
+  margin-top: 500px;
+  margin-left: 300px;
+  margin-right: -600px;
+
+    max-width: 1000px; /* Limita el ancho del texto */
+    font-size: 1.8rem; /* Tamaño de fuente adecuado */
+    line-height: 1.3; /* Espaciado entre líneas */
+    font-family: 'Roboto', sans-serif; /* Fuente consistente */
+    color: #000; /* Color del texto */
+  }
+  
+  .button-container2 {
+    text-align: left;
+    margin-left: 50px; /* Ajusta el margen para posicionar el botón */
+    margin-top: -50px;
+  }
+  
+  .custom-button {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 10px 40px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .custom-button:hover {
+    background-color: #333; /* Cambia ligeramente el tono al pasar el cursor */
+    transform: scale(1.05); /* Amplía ligeramente el botón */
+  }
+
+  .button-container21 {
+    text-align: left;
+    margin-left: 50px; /* Ajusta el margen para posicionar el botón */
+    margin-top: -100px;
+  }
+  
+
+  /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< contacto >>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+  body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor-principal {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Texto e Imagen */
+.texto-e-imagen {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    gap: 100px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.texto {
+    max-width: 500px;
+}
+
+.imagen img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+/* Formulario */
+.formulario {
+  margin-left: -390px;
+    width: 100%;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 1000px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-duo {
+    display: flex;
+    gap: 10px;
+}
+
+.input-duo input {
+    flex: 1;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+button.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #000;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+button.btn:hover {
+    background-color: #333;
+}
+
+/* Responsivo */
+@media (min-width: 768px) {
+    .texto-e-imagen {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .texto {
+        text-align: left;
+    }
+
+    .imagen {
+        max-width: 50%;
+    }
+}
+
+
+
+/* Estilo para el botón del menú */
+.menu-toggle {
+  display: none; /* Oculto por defecto */
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: black;
+  padding: 10px;
+}
+
+/* Estilo para el menú en dispositivos angostos */
+.header-nav .menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Por defecto, el menú se oculta en pantallas pequeñas */
+@media (max-width: 768px) {
+  .menu {
+      display: none;
+      flex-direction: column; /* Alinea en columna */
+      background: white;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para el menú */
+      padding: 10px;
+  }
+
+  .menu.show {
+      display: flex; /* Muestra el menú cuando está activo */
+  }
+
+  .menu-toggle {
+      display: block; /* Muestra el botón en pantallas pequeñas */
+  }
+}
+/* Estilo para el botón del menú */
+/* Botón del menú */
+.menu-toggle {
+  display: none; /* Ocultar por defecto en pantallas grandes */
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: black;
+  padding: 10px;
+  z-index: 1001;
+  position: relative;
+}
+
+/* Menú desplegable */
+.header-nav .menu {
+  display: flex; /* Mostrar siempre en pantallas grandes */
+  flex-direction: row;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ocultar menú en pantallas pequeñas */
+@media (max-width: 768px) {
+  .menu-toggle {
+      display: block; /* Mostrar el botón hamburguesa */
+  }
+
+  .header-nav .menu {
+      display: none; /* Ocultar el menú por defecto */
+      flex-direction: column;
+      gap: 15px;
+      background: white;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+  }
+
+  .menu.show {
+      display: flex; /* Mostrar el menú cuando está activo */
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+      display: block; /* Mostrar el botón en pantallas pequeñas */
+  }
+
+  .header-nav .menu li {
+      text-align: center;
+  }
+}
+
+/* Ajustes para la barra de navegación */
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap; /* Evita que el contenido se desplace a una nueva fila */
+  overflow: hidden; /* Evita desbordamiento visual */
+}
+
+/* Ajustes para el menú */
+.menu {
+  display: flex;
+  flex-direction: row; /* Asegura que los elementos estén en una fila */
+  gap: 20px; /* Espaciado entre enlaces */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap; /* Evita que los elementos se rompan en varias líneas */
+}
+
 
 
 /*  
 .appointment-options {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
 }
 
 .appointment-option {
-    flex: 1;
-    text-align: center;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    transition: box-shadow 0.3s ease;
- }
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+}
 
 .appointment-option:hover {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .appointment-option h3 {
-    margin-bottom: 10px;
-    font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
 }
 
 .appointment-option p {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #4285f4;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  padding: 10px 20px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 */
