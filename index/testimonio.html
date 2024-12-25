@@ -1,129 +1,224 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Testimonios</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body class="testimonios-page">
- <!-- Encabezado -->
- <header id="main-header">
-    <nav class="header-nav">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="testimonios-page">
+    <!-- Encabezado -->
+    <header id="main-header">
+      <nav class="header-nav">
         <!-- Botón de menú hamburguesa -->
-        <button class="menu-toggle" aria-label="Abrir menú">
-            ☰
-        </button>
+        <button class="menu-toggle" aria-label="Abrir menú">☰</button>
         <ul class="menu">
-            <li><a href="index.html" class="active">MAURICIO ESTEBAN</a></li>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="higienismo.html">¿Qué es el higienismo?</a></li>
-            <li><a href="salud.html">La Salud como Arte y Ciencia</a></li>
-            <li><a href="testimonio.html">Testimonios</a></li>
-            <li><a href="about.html">Acerca de</a></li>
-            <li><a href="galeria.html">Galería</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="index.html" class="active">MAURICIO ESTEBAN</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="higienismo.html">¿Qué es el higienismo?</a></li>
+          <li><a href="salud.html">La Salud como Arte y Ciencia</a></li>
+          <li><a href="testimonio.html">Testimonios</a></li>
+          <li><a href="about.html">Acerca de</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
         </ul>
-    </nav>
-</header>
-    
+      </nav>
+    </header>
+
     <main class="testimonio-page">
-        <div class="background-image">
-            <div class="text-content">
-                <h1>Testimonios</h1>
-                <div class="column">
-                    <h2>Joaquín Piña</h2>
-                    <p><strong>Empresario Agrícola</strong></p>
-                    <p>Arteriopatía obstructiva crónica de extremidades inferiores / Isquemia arterial de extremidades inferiores / Diabetes Mellitus tipo II / Hipertensión Arterial.</p>
-                    <p>
-                        Don Joaquín Piña visitó a Mauricio Esteban cuando ya no tenía irrigación sanguínea de las extremidades inferiores. 
-                        El único tratamiento efectivo que le daba la medicina alópata era la amputación de ambas piernas. Tras realizar 
-                        un tratamiento regenerativo higienista asociado a otras terapias, en dos meses pudo volver a caminar y actualmente es un tenista aficionado.
-                    </p>
+      <div class="background-image">
+        <div class="text-content">
+          <h1>Testimonios</h1>
+          <div class="accordion">
+            <div class="accordion-item">
+              <div class="column">
+                <h2 class="accordion-title" onclick="toggleAccordion(this)">
+                  Joaquín Piña
+                  <span class="accordion-toggle"> + </span>
+                </h2>
+                <div class="accordion-content">
+                  <h3>Empresario Agrícola</h3>
+                  <p>
+                    Arteriopatía obstructiva crónica de extremidades inferiores
+                    / Isquemia arterial de extremidades inferiores / Diabetes
+                    Mellitus tipo II / Hipertensión Arterial. \<br />
+                    Don Joaquín Piña visitó a Mauricio Esteban cuando ya no
+                    tenía irrigación sanguínea de las extremidades inferiores.
+                    El único tratamiento efectivo que le daba la medicina
+                    alópata era la amputación de ambas piernas. Tras realizar un
+                    tratamiento regenerativo higienista asociado a otras
+                    terapias, en dos meses pudo volver a caminar y actualmente
+                    es un tenista aficionado.
+                  </p>
                 </div>
-
-                <div class="column">
-                    <h2>Mario Bernales Lillo</h2>
-                    <p><strong>Profesor de castellano (1966) en la Universidad de Chile / Magíster en Lingüística (1984) en la Universidad Austral de Chile /DR. CS., 1995 Universidade Estadual de Campinas (Unicamp) Brasil, Miembro de la sociedad académica de la lengua, Miembro de la comisión nacional de investigación científica y tecnológica, decano la Universidad de la Frontera.</strong></p>
-                    <p>
-                        Diagnósticos: Síndrome Anémico / Síndrome mielodisplásico con exceso de blastos (leucemia) / Hipertensión Arterial Crónica / Constipación.
-                    </p>
-                    <p>
-                        Don Mario Bernales Lillo, con 66 años padecía hipertensión arterial crónica de larga data (23 años), que controlaba con medicamentos antihipertensivos que debía tomar de por vida y los cuales aumentaban en dosis en cada control con su médico. En Octubre del año 2002 se le diagnosticó un síndrome anémico que al ser estudiado, reveló en su examen físico hepatoesplenomegalia y alteraciones morfológicas en sus pruebas inmunohistoquímicas compatibles con un síndrome mielodisplásico con exceso de blastos. Su sangre fue insuficiente para realizar un mielograma y su pronóstico de vida era de 2 meses.
-
-Al año siguiente (2003), en Febrero, conoce a Mauricio Esteban e inicia un sistema de biorritmo higienista. Al tercer día se le normalizar su digestión, la que había estado paralizada por un mes. Se normotensa su presión arterial y abandona el tratamiento antihipertensivo con cifras tensionales normales y mantenidas. Luego de un mes disminuye su peso en 14 kilos y en abril visita un hemato oncólogo de la Clínica Alemana y los exámenes demostraron que el paciente no padecía de leucemia.
-                    </p>
-                </div>
-
-                <div class="column">
-                    <h2>Familia Gaueca Carrillo</h2>
-                    <p><strong>Mauricio Gaueca Martínez:</strong></p>
-                    <p>(40 años) Arquitecto y Bioterapeuta Proactivo Integral: Obesidad Mórbida / Hipertensión Arterial / Hiperuricemia / Hipercolesterolemia familiar.</p>
-                    <p>Mauricio Gaueca Martínez de 43 años de edad padecía de obesidad mórbida con más de 100 kgs de peso corporal, además de hipertensión arterial, hiperuricemia e hipercolesterolemia familiar, es decir, cifras altas de colesterol sanguíneo de origen genético y que por lo tanto, en teoría nunca podría normalizarse sino tan sólo reducirse con tratamiento de por vida. Tras iniciar un tratamiento higienista normalizó su tensión arterial, el ácido úrico y colesterol sanguíneo, independizándose completamente de sus medicamentos.</p>
-                    <p><strong>Teresita Carrillo Porras:</strong></p>
-                    <p>(46 años) Odontóloga : Colon irritable / Cefalea tensional crónica</p>
-                    <p> Teresita Carrillo, siendo una paciente polisintomática y buscando solución para sus principales molestias: el colon irritable y la cefalea, recibe un tratamiento higienista y así regenera su mucosa intestinal y flora bacteriana no teniendo nuevas crisis cólicas. Sus episodios de jaqueca desaparecen.</p>
-                    <p><strong>Catalina y Josefina Gaueca Carrillo</strong></p> 
-                    <p>(11 y 9 años) heredaron la hipercolesterolemia familiar y debían tomar medicamentos de por vida, con un estilo de vida higienista redujeron su colesterol sanguíneo y prescinden de medicamentos. Josefina además padecía de crisis de asma bronquial obstructiva actualmente resuelto.</p>
-                </div>
-
-                <div class="column full">
-                    <h2>Naturista asegura que puede detener el envejecimiento</h2>
-                    <p>
-                        Mediante la terapia naturo-higienista es posible detener el proceso
-de envejecimiento de las personas, siempre que se logre un equilibrio
-en las tres vías básicas que sustentan la energía vital, que son
-alimento adecuado, actividad física equilibrada y estado anímico
-armónico.
-
-Así lo planteó a “La Tercera” Mauricio Esteban, especialista chileno en terapia naturo-higienista, autor de Los biorritmos en el rendimiento orgánico” (1984) y “Ecología personal” (1985), y actual miembro del Instituto de Ecología de Chile.
-
-“Los terapeutas higienistas o naturistas científicos – dijo Gatica- sabemos esencialmente de salud. Por ello, sostenemos que lo mismo que mantiene al individuo sano, cura la enfermedad”.
-
-El higienísmo es llamado en los Estados Unidos “Health Science”, es decir Ciencia de la salud, al igual que en Europa en donde la clínica es más grande es higienista (el Centro de Salud Natural de Costa Brava) y quienes atienden poseen conocimientos de todas las enfermedades.
-
-“Cada paciente – explica Mauricio Esteban- es sometido a un examen llamado biodiagnosis de sondeo, mediante el cual se analiza el estado en que se encuentra la energía vital de su organismo y en qué condiciones ésta se encuentra sustentada por las vías básicas que son alimento adecuado, actividad física equilibrada y estado anímico armónico”.
-
-A partir de eso, de forma natural y sin fármacos, al paciente le son entregados caminos de salud o de restablecimiento prácticos y eficaces, junto a una dieta disociada e intransferible. Esto – dice Maurico Gatica – conlleva el retorno, la mantención o el fortalecimiento de la salud.
-                    </p>
-                    <div class="column full2"></div>
-                    <p><strong>PIERNAS SALVADAS</strong></p>
-                    <p>El espectacular caso de las, piernas salvadas de la amputación fue relatado a “La Tercera” por el propio beneficiado, el empresario agrícola Joaquín Piña.
-
-                        Todo se inició hace aproximadamente un año cuando caminaba por el centro de Santiago, haciendo sus tradicionales diligencias. “De repente -relató- cuando estaba pasando por el bandejón central de la Alameda, me vino una especie de parálisis en mis piernas. Disimulé lo más que pude por el hecho de estar en público, pero cuando quise avanzar, las piernas no me obedecieron. Me asusté muchísimo”.
-                        
-                        “Soy un hombre que lleva más de 40 años andando a caballo, poniéndole el hombro hasta a los sacos en la trilla, así que eso me pillo y me hizo pensar, incluso, en un ataque al corazón, me esperé un ratito y cuando ya aflojó la tensión de las piernas, tomé un taxi y me fui para la casa”.
-                        
-                        Inmediatamente consultó un médico, quien le mandó a hacerse una serie de exámenes.
-                        Prácticamente ya no tenía irrigación de sangre de la rodilla hacia abajo. El médico le dijo que si aparecían síntomas de caída del cabello, dedos morados y escamas, no existía otra alternativa que amputar a ambas extremidades y condenarlo a usa silla de ruedas para el resto de sus días.
-                        
-                        “Fui a ver a Mauricio -recuerda- me examinó las piernas y notó que las plantas de mis pies no reaccionaban a ningún cosquilleo.- Enseguida me dijo: “Va a hacer un régimen”, y lo empezamos en ese mismo momento y en base a verduras y frutas. Cambiaba un día de peras a manzanas comía muchas y comía muchas ensaladas de todo tipo, lechuga, apio, tomate, etc.”.
-                        
-                        Además de esto, debió seguir un tratamiento consistente en baños diarios de barro para sus piernas. “Eso fue tremendamente incómodo para mí. Vivo en un departamento y a mi mujer, por mucho que apoyara mi recuperación, no la dejaba muy contenta este sistemita”.
-                        
-                        A los dos meses después ya pudo obtener los primeros resultados cuándo consiguió caminar media cuadra sin cansarse.</p>
-                </div>
+              </div>
             </div>
+
+            <div class="accordion-item">
+              <div class="column">
+                <h2 class="accordion-title" onclick="toggleAccordion(this)">
+                  Mario Bernales Lillo
+                  <span class="accordion-toggle"> + </span>
+                </h2>
+                <div class="accordion-content">
+                  <p>
+                    <strong
+                      >Profesor de castellano (1966) en la Universidad de Chile
+                      / Magíster en Lingüística (1984) en la Universidad Austral
+                      de Chile /DR. CS., 1995 Universidade Estadual de Campinas
+                      (Unicamp) Brasil, Miembro de la sociedad académica de la
+                      lengua, Miembro de la comisión nacional de investigación
+                      científica y tecnológica, decano la Universidad de la
+                      Frontera.</strong
+                    ><br />
+                    Diagnósticos: Síndrome Anémico / Síndrome mielodisplásico
+                    con exceso de blastos (leucemia) / Hipertensión Arterial
+                    Crónica / Constipación. <br />
+                    Don Mario Bernales Lillo, con 66 años padecía hipertensión
+                    arterial crónica de larga data (23 años), que controlaba con
+                    medicamentos antihipertensivos que debía tomar de por vida y
+                    los cuales aumentaban en dosis en cada control con su
+                    médico. En Octubre del año 2002 se le diagnosticó un
+                    síndrome anémico que al ser estudiado, reveló en su examen
+                    físico hepatoesplenomegalia y alteraciones morfológicas en
+                    sus pruebas inmunohistoquímicas compatibles con un síndrome
+                    mielodisplásico con exceso de blastos. Su sangre fue
+                    insuficiente para realizar un mielograma y su pronóstico de
+                    vida era de 2 meses. Al año siguiente (2003), en Febrero,
+                    conoce a Mauricio Esteban e inicia un sistema de biorritmo
+                    higienista. Al tercer día se le normalizar su digestión, la
+                    que había estado paralizada por un mes. Se normotensa su
+                    presión arterial y abandona el tratamiento antihipertensivo
+                    con cifras tensionales normales y mantenidas. Luego de un
+                    mes disminuye su peso en 14 kilos y en abril visita un
+                    hemato oncólogo de la Clínica Alemana y los exámenes
+                    demostraron que el paciente no padecía de leucemia.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="column">
+                <h2 class="accordion-title" onclick="toggleAccordion(this)">
+                  Familia Gaueca Carrillo
+                  <span class="accordion-toggle">+</span>
+                </h2>
+                <div class="accordion-content">
+                  <h3>Mauricio Gaueca Martínez:</h3>
+                  <p>
+                    (40 años) Arquitecto y Bioterapeuta Proactivo Integral:
+                    Obesidad Mórbida / Hipertensión Arterial / Hiperuricemia /
+                    Hipercolesterolemia familiar. <br />
+                    Mauricio Gaueca Martínez de 43 años de edad padecía de
+                    obesidad mórbida con más de 100 kgs de peso corporal, además
+                    de hipertensión arterial, hiperuricemia e
+                    hipercolesterolemia familiar, es decir, cifras altas de
+                    colesterol sanguíneo de origen genético y que por lo tanto,
+                    en teoría nunca podría normalizarse sino tan sólo reducirse
+                    con tratamiento de por vida. Tras iniciar un tratamiento
+                    higienista normalizó su tensión arterial, el ácido úrico y
+                    colesterol sanguíneo, independizándose completamente de sus
+                    medicamentos.
+                  </p>
+
+                  <h3>Teresita Carrillo Porras:</h3>
+                  <p>
+                    (46 años) Odontóloga : Colon irritable / Cefalea tensional
+                    crónica <br />
+                    Teresita Carrillo, siendo una paciente polisintomática y
+                    buscando solución para sus principales molestias: el colon
+                    irritable y la cefalea, recibe un tratamiento higienista y
+                    así regenera su mucosa intestinal y flora bacteriana no
+                    teniendo nuevas crisis cólicas. Sus episodios de jaqueca
+                    desaparecen.
+                  </p>
+                  <h3>Catalina y Josefina Gaueca Carrillo</h3>
+                  <p>
+                    (11 y 9 años) heredaron la hipercolesterolemia familiar y
+                    debían tomar medicamentos de por vida, con un estilo de vida
+                    higienista redujeron su colesterol sanguíneo y prescinden de
+                    medicamentos. Josefina además padecía de crisis de asma
+                    bronquial obstructiva actualmente resuelto.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column full">
+            <h2>Naturista asegura que puede detener el envejecimiento</h2>
+            <p>
+              Mediante la terapia naturo-higienista es posible detener el
+              proceso de envejecimiento de las personas, siempre que se logre un
+              equilibrio en las tres vías básicas que sustentan la energía
+              vital, que son alimento adecuado, actividad física equilibrada y
+              estado anímico armónico. Así lo planteó a “La Tercera” Mauricio
+              Esteban, especialista chileno en terapia naturo-higienista, autor
+              de Los biorritmos en el rendimiento orgánico” (1984) y “Ecología
+              personal” (1985), y actual miembro del Instituto de Ecología de
+              Chile. “Los terapeutas higienistas o naturistas científicos – dijo
+              Gatica- sabemos esencialmente de salud. Por ello, sostenemos que
+              lo mismo que mantiene al individuo sano, cura la enfermedad”. El
+              higienísmo es llamado en los Estados Unidos “Health Science”, es
+              decir Ciencia de la salud, al igual que en Europa en donde la
+              clínica es más grande es higienista (el Centro de Salud Natural de
+              Costa Brava) y quienes atienden poseen conocimientos de todas las
+              enfermedades. “Cada paciente – explica Mauricio Esteban- es
+              sometido a un examen llamado biodiagnosis de sondeo, mediante el
+              cual se analiza el estado en que se encuentra la energía vital de
+              su organismo y en qué condiciones ésta se encuentra sustentada por
+              las vías básicas que son alimento adecuado, actividad física
+              equilibrada y estado anímico armónico”. A partir de eso, de forma
+              natural y sin fármacos, al paciente le son entregados caminos de
+              salud o de restablecimiento prácticos y eficaces, junto a una
+              dieta disociada e intransferible. Esto – dice Maurico Gatica –
+              conlleva el retorno, la mantención o el fortalecimiento de la
+              salud.
+            </p>
+            <div class="column full2"></div>
+            <p><strong>PIERNAS SALVADAS</strong></p>
+            <p>
+              El espectacular caso de las, piernas salvadas de la amputación fue
+              relatado a “La Tercera” por el propio beneficiado, el empresario
+              agrícola Joaquín Piña. Todo se inició hace aproximadamente un año
+              cuando caminaba por el centro de Santiago, haciendo sus
+              tradicionales diligencias. “De repente -relató- cuando estaba
+              pasando por el bandejón central de la Alameda, me vino una especie
+              de parálisis en mis piernas. Disimulé lo más que pude por el hecho
+              de estar en público, pero cuando quise avanzar, las piernas no me
+              obedecieron. Me asusté muchísimo”. “Soy un hombre que lleva más de
+              40 años andando a caballo, poniéndole el hombro hasta a los sacos
+              en la trilla, así que eso me pillo y me hizo pensar, incluso, en
+              un ataque al corazón, me esperé un ratito y cuando ya aflojó la
+              tensión de las piernas, tomé un taxi y me fui para la casa”.
+              Inmediatamente consultó un médico, quien le mandó a hacerse una
+              serie de exámenes. Prácticamente ya no tenía irrigación de sangre
+              de la rodilla hacia abajo. El médico le dijo que si aparecían
+              síntomas de caída del cabello, dedos morados y escamas, no existía
+              otra alternativa que amputar a ambas extremidades y condenarlo a
+              usa silla de ruedas para el resto de sus días. “Fui a ver a
+              Mauricio -recuerda- me examinó las piernas y notó que las plantas
+              de mis pies no reaccionaban a ningún cosquilleo.- Enseguida me
+              dijo: “Va a hacer un régimen”, y lo empezamos en ese mismo momento
+              y en base a verduras y frutas. Cambiaba un día de peras a manzanas
+              comía muchas y comía muchas ensaladas de todo tipo, lechuga, apio,
+              tomate, etc.”. Además de esto, debió seguir un tratamiento
+              consistente en baños diarios de barro para sus piernas. “Eso fue
+              tremendamente incómodo para mí. Vivo en un departamento y a mi
+              mujer, por mucho que apoyara mi recuperación, no la dejaba muy
+              contenta este sistemita”. A los dos meses después ya pudo obtener
+              los primeros resultados cuándo consiguió caminar media cuadra sin
+              cansarse.
+            </p>
+          </div>
         </div>
+      </div>
     </main>
     <!-- Script para controlar el menú -->
-    <script>
-        // Seleccionar el botón de menú y el contenedor del menú
-        const menuToggle = document.querySelector('.menu-toggle');
-        const menu = document.querySelector('.menu');
-
-        // Agregar evento de clic para alternar el menú
-        menuToggle.addEventListener('click', () => {
-            menu.classList.toggle('show'); // Alternar clase "show"
-
-            // Cambiar el ícono del botón
-            if (menu.classList.contains('show')) {
-                menuToggle.textContent = '✖'; // Cambiar a "X" para cerrar
-            } else {
-                menuToggle.textContent = '☰'; // Cambiar a hamburguesa
-            }
-        });
-    </script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

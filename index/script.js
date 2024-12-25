@@ -1,29 +1,47 @@
-document.addEventListener('DOMContentLoaded', () => {
-  console.log('Página cargada');
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Página cargada");
 });
 const images = [
-  'assets/gal1.png',
-  'assets/gal2.png',
-  'assets/gal3.png',
-  'assets/gal4.png'
+  "assets/gal1.png",
+  "assets/gal2.png",
+  "assets/gal3.png",
+  "assets/gal4.png",
 ];
+
+function toggleAccordion(element) {
+  const content = element.nextElementSibling; // Obtiene el contenido asociado
+  const isOpen = content.style.display === "block";
+
+  // Cierra todos los contenidos
+  document.querySelectorAll(".accordion-content").forEach((item) => {
+    item.style.display = "none";
+    item.previousElementSibling.querySelector(".accordion-toggle").textContent =
+      "+";
+  });
+
+  // Abre o cierra el contenido seleccionado
+  if (!isOpen) {
+    content.style.display = "block";
+    element.querySelector(".accordion-toggle").textContent = "-";
+  }
+}
 
 let currentIndex = 0;
 
 const modal = document.getElementById("appointment-modal");
 const closeModalButton = document.getElementById("close-modal");
 const bookButtons = document.querySelectorAll(".book-button");
-const galleryImage = document.getElementById('gallery-image');
-const prevButton = document.getElementById('prev');
-const nextButton = document.getElementById('next');
+const galleryImage = document.getElementById("gallery-image");
+const prevButton = document.getElementById("prev");
+const nextButton = document.getElementById("next");
 
 function showImage(index) {
   currentIndex = (index + images.length) % images.length; // Asegura el bucle infinito
   galleryImage.src = images[currentIndex];
 }
 
-prevButton.addEventListener('click', () => showImage(currentIndex - 1));
-nextButton.addEventListener('click', () => showImage(currentIndex + 1));
+prevButton.addEventListener("click", () => showImage(currentIndex - 1));
+nextButton.addEventListener("click", () => showImage(currentIndex + 1));
 
 // Maneja la respuesta del login
 function handleCredentialResponse(response) {
@@ -59,19 +77,21 @@ modal.addEventListener("click", (event) => {
 });
 
 // Manejar el envío del formulario
-document.getElementById("appointment-form").addEventListener("submit", (event) => {
-  event.preventDefault(); // Evita que la página se recargue
+document
+  .getElementById("appointment-form")
+  .addEventListener("submit", (event) => {
+    event.preventDefault(); // Evita que la página se recargue
 
-  const date = document.getElementById("date").value;
-  const time = document.getElementById("time").value;
+    const date = document.getElementById("date").value;
+    const time = document.getElementById("time").value;
 
-  // Formatear la fecha y hora
-  const startDateTime = new Date(`${date}T${time}:00`);
-  const endDateTime = new Date(startDateTime.getTime() + 30 * 60000); // +30 minutos
+    // Formatear la fecha y hora
+    const startDateTime = new Date(`${date}T${time}:00`);
+    const endDateTime = new Date(startDateTime.getTime() + 30 * 60000); // +30 minutos
 
-  // Llamar a la función para crear el evento
-  createCalendarEvent(startDateTime, endDateTime);
-});
+    // Llamar a la función para crear el evento
+    createCalendarEvent(startDateTime, endDateTime);
+  });
 
 // Crear un evento en Google Calendar
 function createCalendarEvent(startDateTime, endDateTime) {
@@ -113,7 +133,8 @@ function initializeGoogleCalendarAPI() {
     gapi.client
       .init({
         apiKey: "AIzaSyD0UU97jFQwBEuTFlv8T9unI6FM8-k8AsE", // Reemplaza con tu API Key de Google
-        clientId: "897170356005-0gfkpot37f8trhks2s1gps1iif6j4boo.apps.googleusercontent.com", // Reemplaza con tu Client ID de Google
+        clientId:
+          "897170356005-0gfkpot37f8trhks2s1gps1iif6j4boo.apps.googleusercontent.com", // Reemplaza con tu Client ID de Google
         discoveryDocs: [
           "https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest",
         ],
@@ -127,6 +148,20 @@ function initializeGoogleCalendarAPI() {
       });
   });
 }
+// Seleccionar el botón de menú y el contenedor del menú
+const menuToggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".menu");
 
+// Agregar evento de clic para alternar el menú
+menuToggle.addEventListener("click", () => {
+  menu.classList.toggle("show"); // Alternar clase "show"
+
+  // Cambiar el ícono del botón
+  if (menu.classList.contains("show")) {
+    menuToggle.textContent = "✖"; // Cambiar a "X" para cerrar
+  } else {
+    menuToggle.textContent = "☰"; // Cambiar a hamburguesa
+  }
+});
 // Llamar a la función de inicialización al cargar la página
 document.addEventListener("DOMContentLoaded", initializeGoogleCalendarAPI);

@@ -10,15 +10,7 @@ body {
 /* Header Styles */
 
 /* Estilo general del header */
-header {
-display: flex;
-justify-content: space-between; /* Espacia el contenido */
-align-items: center; /* Alinea verticalmente */
-padding: 30px 50px;
-width: 100%;
-z-index: 1000;
-backdrop-filter: blur(10px); /* Aplica el efecto de desenfoque */
-}
+
 
 
 /* Estilo del contenedor interno del header */
@@ -72,16 +64,6 @@ body {
 }
 
 /* Encabezado */
-header {
-  position: sticky; /* Alternativamente, usa fixed si quieres que siempre esté visible */
-  top: 0; /* Fija el header al inicio de la página */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  width: 100%;
-  z-index: 1000;
-}
 
 .menu-toggle {
   display: none;
@@ -167,6 +149,8 @@ header {
 
 .about-text {
   flex: 1;
+  align-items: flex-start;
+  margin-top: -245px;
 }
 
 .about-text h2 {
@@ -341,9 +325,11 @@ justify-content: space-between;
 align-items: center;
 padding: 30px 50px;
 width: 100%;
+height: 5px;
 position: fixed;
 top: 0;
 z-index: 1000;
+backdrop-filter: blur(3px);
 }
 
 .header-nav ul {
@@ -405,45 +391,6 @@ margin-bottom: 10px;
 
 /* Estilo específico para el header de testimonios */
 
-#testimonios-header.light {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 20px 50px;
-width: 100%;
-z-index: 1000;
-position: absolute;
-top: 0;
-left: 0;
-background: transparent;
-color: rgb(0, 0, 0);
-}
-
-#testimonios-header.light .header-nav ul {
-list-style: none;
-display: flex;
-gap: 20px;
-margin: 0;
-padding: 0;
-}
-
-#testimonios-header.light .header-nav ul li a {
-text-decoration: none;
-font-size: 1rem;
-font-family: 'Roboto', sans-serif;
-color: rgb(0, 0, 0);
-transition: color 0.3s ease;
-}
-
-#testimonios-header.light .header-nav ul li a.active {
-text-decoration: underline;
-font-weight: bold;
-}
-
-#testimonios-header.light .header-nav ul li a:hover {
-color: #ddd;
-}
-
 /* Fondo y estructura principal */
 .background-image {
 background-image: url('assets/testomonio.jpg');
@@ -463,10 +410,8 @@ padding: 30px;
 border-radius: 8px;
 width: 100%;
 max-width: 1200px;
-display: grid;
-grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
-gap: 30px; /* Espacio entre columnas */
 }
+
 
 .text-content h1 {
 font-size: 2.5rem;
@@ -482,6 +427,11 @@ line-height: 1.6;
 }
 
 .text-content .column {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  display: grid;
+  width: 100%;
+  padding: 10px;
 display: flex;
 flex-direction: column;
 gap: 15px; /* Espacio entre elementos de cada columna */
@@ -489,23 +439,64 @@ gap: 15px; /* Espacio entre elementos de cada columna */
 
 .text-content .column.full {
 grid-column: span 3; /* Columna que ocupa todo el ancho */
+background: none;
 }
+.text-content .column.full2 {
+  grid-column: span 3; /* Columna que ocupa todo el ancho */
+  background: none;
+  }
 
 .text-content h2 {
 font-size: 1.5rem;
 margin-bottom: 10px;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-.text-content {
-  grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+.accordion {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-.text-content h1 {
-  font-size: 2rem; /* Reducir tamaño del título */
+.accordion-item {
+  margin: 20px;
 }
+
+.accordion-title {
+  background: #333;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.accordion-title:hover {
+  background: #444;
+}
+
+.accordion-toggle {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.accordion-content {
+  display: none; /* Oculta el contenido inicialmente */
+  padding: 10px;
+  background: #f9f9f9;
+  color: #333;
+  font-size: 0.9em;
+}
+
+.accordion-content p {
+  margin: 5px ;
+}
+
+
+
+/* Responsivo */
+
 
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< ABBOUT US >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
@@ -893,7 +884,10 @@ text-align: justify; /* Justifica el texto */
       text-align: center;
   }
 }
-
+.button-container8 {
+  text-align: center;
+  margin-right: 50px; /* Ajusta el margen para posicionar el botón */
+}
 .button-container {
   text-align: right;
   margin-right: 50px; /* Ajusta el margen para posicionar el botón */
@@ -1099,27 +1093,7 @@ button.btn:hover {
 }
 
 /* Por defecto, el menú se oculta en pantallas pequeñas */
-@media (max-width: 768px) {
-  .menu {
-      display: none;
-      flex-direction: column; /* Alinea en columna */
-      background: white;
-      position: absolute;
-      top: 60px;
-      right: 0;
-      width: 100%;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para el menú */
-      padding: 10px;
-  }
 
-  .menu.show {
-      display: flex; /* Muestra el menú cuando está activo */
-  }
-
-  .menu-toggle {
-      display: block; /* Muestra el botón en pantallas pequeñas */
-  }
-}
 /* Estilo para el botón del menú */
 /* Botón del menú */
 .menu-toggle {
@@ -1136,6 +1110,8 @@ button.btn:hover {
 
 /* Menú desplegable */
 .header-nav .menu {
+  text-align: left;
+  justify-content: left;
   display: flex; /* Mostrar siempre en pantallas grandes */
   flex-direction: row;
   gap: 20px;
@@ -1146,9 +1122,22 @@ button.btn:hover {
 
 /* Ocultar menú en pantallas pequeñas */
 @media (max-width: 768px) {
-  .menu-toggle {
-      display: block; /* Mostrar el botón hamburguesa */
+  .text-content {
+    display: inline-block; /* Una columna en pantallas pequeñas */
   }
+  
+  .text-content h1 {
+    font-size: 2rem; /* Reducir tamaño del título */
+  }
+  .menu-toggle {
+    display: block; /* Mostrar el botón en pantallas pequeñas */
+}
+
+.header-nav .menu li {
+    text-align: left;
+    margin-left: 40px;
+}
+
 
   .header-nav .menu {
       display: none; /* Ocultar el menú por defecto */
@@ -1166,16 +1155,9 @@ button.btn:hover {
   .menu.show {
       display: flex; /* Mostrar el menú cuando está activo */
   }
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-      display: block; /* Mostrar el botón en pantallas pequeñas */
-  }
-
-  .header-nav .menu li {
-      text-align: center;
-  }
+  .info-image {
+    display: none;
+    }
 }
 
 /* Ajustes para la barra de navegación */
