@@ -7,6 +7,23 @@ const images = [
   "assets/gal3.png",
   "assets/gal4.png",
 ];
+const menuToggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".menu");
+  if (menuToggle && menu) {
+    // Agregar evento de clic para alternar el menú
+    menuToggle.addEventListener("click", () => {
+      menu.classList.toggle("show"); // Alternar clase "show"
+
+      // Cambiar el ícono del botón
+      if (menu.classList.contains("show")) {
+        menuToggle.textContent = "✖"; // Cambiar a "X" para cerrar
+      } else {
+        menuToggle.textContent = "☰"; // Cambiar a hamburguesa
+      }
+    });
+  } else {
+    console.error("No se encontraron los elementos del menú.");
+  }
 
 function toggleAccordion(element) {
   const content = element.nextElementSibling; // Obtiene el contenido asociado
@@ -148,20 +165,5 @@ function initializeGoogleCalendarAPI() {
       });
   });
 }
-// Seleccionar el botón de menú y el contenedor del menú
-const menuToggle = document.querySelector(".menu-toggle");
-const menu = document.querySelector(".menu");
-
-// Agregar evento de clic para alternar el menú
-menuToggle.addEventListener("click", () => {
-  menu.classList.toggle("show"); // Alternar clase "show"
-
-  // Cambiar el ícono del botón
-  if (menu.classList.contains("show")) {
-    menuToggle.textContent = "✖"; // Cambiar a "X" para cerrar
-  } else {
-    menuToggle.textContent = "☰"; // Cambiar a hamburguesa
-  }
-});
 // Llamar a la función de inicialización al cargar la página
 document.addEventListener("DOMContentLoaded", initializeGoogleCalendarAPI);

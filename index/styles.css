@@ -230,7 +230,10 @@ transform: scale(1.05); /* Amplía ligeramente al pasar el mouse */
 
 /* Estilo específico para la sección hero */
 .hero {
-background: url('assets/que.jpg') no-repeat center center/cover;
+background: url('assets/que.jpg');
+background-size: cover; /* Escala la imagen para que ocupe todo el fondo */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen */
 height: 100vh; /* Ocupa toda la altura de la ventana */
 display: flex;
 justify-content: center; /* Centra horizontalmente el contenido */
@@ -286,11 +289,15 @@ color: #000000;
 
 .text-overlay-section {
 position: relative;
-background-image: url('assets/que2.svg'); /* Asegúrate de que el archivo de imagen esté en el mismo directorio o ajusta la ruta */
+background-image: url('assets/que2.svg'); /* Ruta de la imagen */
+background-size: cover; /* Escala la imagen para que ocupe todo el fondo */
+background-repeat: no-repeat; /* Evita que la imagen se repita */
+background-position: center; /* Centra la imagen */ /* Asegúrate de que el archivo de imagen esté en el mismo directorio o ajusta la ruta */
 background-size: contain;
 background-position: no-repeat;
 background-position: center; /* Centra la imagen */
-height: 100vh; /* Ajusta la altura según lo necesites */
+height: 130vh; /* Ajusta la altura según lo necesites */
+margin-bottom: none;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -308,7 +315,8 @@ padding: 20px;
 font-family: 'Roboto', sans-serif;
 font-size: 1rem;
 line-height: 1.4;
-margin: 0;
+
+
 }
 
 /*<<<<<<<<<<<<<<<<<<<< La salud como arte y ciencia >>>>>>>>>>>>>>>>>>>>>*/
@@ -410,6 +418,7 @@ padding: 30px;
 border-radius: 8px;
 width: 100%;
 max-width: 1200px;
+margin-left: 1px;
 }
 
 
@@ -477,7 +486,7 @@ margin-bottom: 10px;
 }
 
 .accordion-toggle {
-  font-size: 1.2em;
+  font-size: 10 rem;
   font-weight: bold;
 }
 
@@ -499,68 +508,6 @@ margin-bottom: 10px;
 
 
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< ABBOUT US >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-
-/* Estilo específico para el header en la página "Acerca de" */
-.acerca-page #acerca-header.light {
-display: flex;
-justify-content: space-between; /* Espacia el contenido */
-align-items: center; /* Alinea verticalmente */
-padding: 20px 50px;
-width: 100%;
-z-index: 1000;
-position: absolute; /* Posiciona sobre la imagen */
-top: 0;
-left: 0;
-background: transparent; /* Fondo transparente */
-color: rgb(0, 0, 0); /* Texto blanco */
-}
-
-/* Estilo para el menú de navegación */
-.acerca-page #acerca-header.light .header-nav ul {
-list-style: none; /* Elimina puntos de lista */
-display: flex; /* Alinea las opciones en fila */
-gap: 20px; /* Espacio entre opciones */
-margin: 0;
-padding: 0;
-}
-
-/* Fondo y estructura principal */
-.background-image2 {
-background-image: url('assets/testimonio2.svg');
-background-size: cover;
-background-position: center;
-min-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: flex-start;
-padding: 50px;
-}
-
-.acerca-page #acerca-header.light .header-nav ul li a {
-text-decoration: none; /* Elimina subrayado */
-font-size: 1rem; /* Tamaño del texto */
-font-family: 'Roboto', sans-serif; /* Fuente personalizada */
-color: rgb(0, 0, 0); /* Texto blanco */
-transition: color 0.3s ease; /* Efecto de transición al pasar el mouse */
-}
-
-.acerca-page #acerca-header.light .header-nav ul li a.active {
-text-decoration: underline; /* Subraya la opción activa */
-font-weight: bold;
-}
-
-.acerca-page #acerca-header.light .header-nav ul li a:hover {
-color: #ffffff; /* Cambia a un gris claro al pasar el mouse */
-}
-
-/* Ajuste especial para "MAURICIO ESTEBAN" */
-.acerca-page #acerca-header.light .header-nav ul li:first-child a {
-font-size: 1.7rem; /* Tamaño más grande */
-margin-right: 175px; /* Espacio extra hacia la derecha */
-color: rgb(0, 0, 0);
-text-decoration: none; /* Elimina el subrayado */
-}
-
 
 /* Estilo para el contenedor principal */
 .content-wrapper {
@@ -593,6 +540,7 @@ font-weight: 400; /* Peso más ligero */
 font-size: 1.1rem; /* Tamaño de fuente */
 line-height: 1.6; /* Espaciado entre líneas */
 margin-bottom: 15px;
+margin-right: 60px;
 }
 
 /* Estilo para la sección de imagen */
@@ -603,13 +551,24 @@ flex: 1; /* Ocupa menos espacio */
 .image-section img {
 width: auto;
 height: 20%;
-border-radius: 8px; /* Bordes redondeados */
+border-radius: 12px; /* Bordes redondeados */
 object-fit: cover;
 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para la imagen */
 }
 
 /* Responsivo */
-@media (max-width: 768px) {
+@media (max-width: 428px) {
+
+  .text-overlay-content p {
+    font-size: 0.8rem;
+    margin-top: -610px;
+    
+    }
+
+  .text-overlay-section{
+    background-size: contain; /* Escala la imagen para que se ajuste al ancho o alto */
+    background-position: center top; /* Ajusta la posición de la imagen */
+}
 .content-wrapper {
   flex-direction: column; /* Cambiar a diseño vertical */
   gap: 30px;
@@ -631,145 +590,47 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para la imagen */
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< GALERIA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
 /* Estilo específico para el header de la galería */
-#galeria-header.light {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 20px 50px;
-width: 100%;
-z-index: 1000;
-position: absolute;
-top: 0;
-left: 0;
-background: transparent; /* Fondo transparente para que la imagen de fondo sea visible */
-color: rgb(0, 0, 0);
-}
-
-#galeria-header.light .header-nav ul {
-list-style: none;
-display: flex;
-gap: 20px; /* Espaciado entre los elementos del menú */
-margin: 0;
-padding: 0;
-}
-
-#galeria-header.light .header-nav ul li a {
-font-size: 1rem;
-font-family: 'Roboto', sans-serif;
-color: rgb(6, 6, 6);
-transition: color 0.3s ease;
-}
-
-#galeria-header.light .header-nav ul li a.active {
-text-decoration: underline; /* Subraya el enlace activo */
-font-weight: bold;
-}
-#galeria-header.light .header-nav ul li:first-child a {
-font-size: 1.5rem; /* Ajusta el tamaño si es necesario */
-font-weight: bold; /* Negrita */
-text-decoration: none; /* Elimina el subrayado */
-color: rgb(0, 0, 0); /* Color negro o el que prefieras */
-}
-
-
-#galeria-header.light .header-nav ul li a:hover {
-color: #000000; /* Color claro al pasar el cursor */
-}
-
-/* Responsivo para el header */
-@media (max-width: 768px) {
-#galeria-header.light {
-  padding: 15px 20px;
-}
-
-#galeria-header.light .header-nav ul {
-  flex-direction: column;
-  gap: 10px;
-}
-
-#galeria-header.light .header-nav ul li a {
-  font-size: 0.9rem; /* Reduce el tamaño en pantallas pequeñas */
-}
-}
 
 /* Sección de galería */
-.gallery-section {
-width: 100%;
-max-width: 1200px;
-}
 
-.gallery-container {
-display: flex;
-justify-content: center; /* Centra las imágenes horizontalmente */
-align-items: flex-start;
-gap: 20px; /* Espaciado entre las imágenes */
-margin-top: 200px; /* Baja las imágenes */
-padding: 20px;
-}
-
+/* Estilos del contenedor de cada elemento */
 .gallery-item {
-width: 300px; /* Ancho uniforme para todas las imágenes */
-height: 200px; /* Alto uniforme */
-overflow: hidden; /* Oculta contenido que exceda el contenedor */
-position: relative;
-cursor: pointer;
+  position: relative; /* Hace que .overlay-text se posicione relativo al contenedor */
+  overflow: hidden; /* Evita que el texto o la imagen sobresalgan */
+  border-radius: 10px; /* Opcional: bordes redondeados */
 }
 
-.gallery-item:hover {
-transform: scale(1.05);
-
-}
-
+/* Imagen dentro de la galería */
 .gallery-item img {
-width: 100%; /* Ajusta la imagen al ancho del contenedor */
-height: 100%; /* Ajusta la imagen al alto del contenedor */
-object-fit: cover; /* Recorta y ajusta la imagen para que encaje perfectamente */
-transition: transform 0.3s ease; /* Animación suave al pasar el cursor */
+  width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+  height: 100%; /* Imagen ocupa todo el alto del contenedor */
+  object-fit: cover; /* Recorta la imagen para que encaje */
+  transition: transform 0.3s ease; /* Animación suave al escalar */
 }
 
-.gallery-item .overlay {
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background-color: rgba(0, 0, 0, 0.6);
-display: flex;
-justify-content: center;
-align-items: center;
-opacity: 0;
-transition: opacity 0.3s ease;
+/* Efecto de escala al pasar el cursor */
+.gallery-item:hover img {
+  transform: scale(1.05); /* Escala la imagen ligeramente */
+  opacity: 0.8; /* Reduce la opacidad */
 }
 
 /* Texto superpuesto */
 .gallery-item .overlay-text {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-color: white;
-font-size: 1.5rem;
-font-weight: bold;
-text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
-opacity: 0;
-transition: opacity 0.3s ease;
+  position: absolute; /* Posiciona el texto sobre la imagen */
+  top: 50%; /* Centra verticalmente */
+  left: 50%; /* Centra horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta el texto al centro exacto */
+  color: white; /* Texto blanco */
+  font-size: 1.5rem; /* Tamaño del texto */
+  font-weight: bold; /* Texto en negrita */
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para mejor visibilidad */
+  opacity: 0; /* Oculta el texto por defecto */
+  transition: opacity 0.3s ease; /* Transición suave al mostrar/ocultar */
 }
 
-
-
-.gallery-item:hover img {
-opacity: 0.8;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-.gallery-container {
-    grid-template-columns: 1fr;
-}
-}
-
+/* Muestra el texto al pasar el cursor */
 .gallery-item:hover .overlay-text {
-opacity: 1; /* Muestra el texto al pasar el cursor */
+  opacity: 1; /* Muestra el texto */
 }
 
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<SEMINARIOS>>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -805,6 +666,7 @@ text-align: justify; /* Justifica el texto */
 
 /* Responsivo */
 @media (max-width: 768px) {
+
 #seminarios-header.light {
     padding: 15px 20px;
 }
@@ -995,7 +857,7 @@ text-align: justify; /* Justifica el texto */
   margin-left: -390px;
     width: 100%;
     max-width: 600px;
-    background-color: #f9f9f9;
+    background-color: white;
     padding: 20px;
     border-radius: 1000px;
 }
@@ -1052,25 +914,6 @@ button.btn:hover {
     background-color: #333;
 }
 
-/* Responsivo */
-@media (min-width: 768px) {
-    .texto-e-imagen {
-        flex-direction: row;
-        justify-content: space-between;
-        text-align: left;
-    }
-
-    .texto {
-        text-align: left;
-    }
-
-    .imagen {
-        max-width: 50%;
-    }
-}
-
-
-
 /* Estilo para el botón del menú */
 .menu-toggle {
   display: none; /* Oculto por defecto */
@@ -1122,8 +965,62 @@ button.btn:hover {
 
 /* Ocultar menú en pantallas pequeñas */
 @media (max-width: 768px) {
-  .text-content {
-    display: inline-block; /* Una columna en pantallas pequeñas */
+  .gallery-container{
+    margin-right: 300px;
+  }
+    .button-container {
+      flex-direction: column; /* Coloca los botones en columna */
+      align-items: center; /* Centra los botones verticalmente */
+      margin-top: 40px; /* Mueve los botones más abajo */
+      gap: 15px; /* Reduce el espacio entre los botones */
+    }
+  
+    .custom-button {
+      padding: 8px 15px; /* Reduce el tamaño del botón */
+      font-size: 0.875rem; /* Reduce el tamaño del texto */
+      border-radius: 50px; /* Ajusta el radio de los bordes */
+      margin-bottom: 14px;
+      margin-right: -120px;
+    }
+  
+  .texto{
+      margin-left: -250px; /* Márgen izquierdo */
+      margin-right: 650px; /* Márgen derecho */    
+  }
+  .texto p{
+    font-size: 1.4rem;   
+}
+  .overlay {
+    margin-left: 30px; /* Márgen izquierdo */
+    margin-right: 30px; /* Márgen derecho */
+  }
+  .formulario {
+    margin-left: 100;
+    padding: 15px; /* Reduce el padding en pantallas pequeñas */
+    border-radius: 15px; /* Ajusta el radio del borde */
+  }
+
+  .input-duo {
+    flex-direction: column; /* Cambia a disposición vertical en pantallas pequeñas */
+    gap: 5px; /* Reduce el espacio entre inputs */
+  }
+  .gallery-container {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección de las opciones a vertical */
+    gap: 20px; /* Espaciado entre los elementos */
+    align-items: center; /* Centra las opciones dentro del contenedor */
+  }
+
+  .gallery-item {
+    width: 100%; /* Asegura que cada elemento ocupe todo el ancho del contenedor */
+  }
+  .about-text{
+    margin-top: 10px;
+  }
+
+  .text-content h2{
+    display: inline-block; 
+    font-size: 0.8rem;/* Una columna en pantallas pequeñas */
   }
   
   .text-content h1 {
@@ -1158,6 +1055,27 @@ button.btn:hover {
   .info-image {
     display: none;
     }
+
+    .content-wrapper {
+  flex-direction: column; /* Cambiar a diseño vertical */
+  gap: 30px;
+}
+
+.button-container8{
+  display: block; /* Convierte el botón en un bloque */
+  margin: 0 auto; /* Centra horizontalmente */
+}
+.text-section {
+  padding-right: 0; /* Eliminar padding en diseño vertical */
+}
+
+.text-section h1 {
+  font-size: 2rem; /* Reducir tamaño del título */
+}
+
+.text-section p {
+  font-size: 1rem; /* Reducir tamaño del texto */
+}
 }
 
 /* Ajustes para la barra de navegación */
