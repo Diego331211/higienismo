@@ -549,7 +549,7 @@ flex: 1; /* Ocupa menos espacio */
 }
 
 .image-section img {
-width: auto;
+width: 330px;
 height: 20%;
 border-radius: 12px; /* Bordes redondeados */
 object-fit: cover;
@@ -713,6 +713,66 @@ text-align: justify; /* Justifica el texto */
   border: none;
 }
 
+.gallery-container0{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  gap: 20px; /* Espacio entre las imágenes */
+  padding: 20px; /* Espaciado interno */
+  max-width: 1200px; /* Ancho máximo de la galería */
+  margin: 0 auto; /* Centrar la galería */
+  margin-top: 260px; /* Cambia este valor */
+}
+
+/* Imágenes de la galería */
+.gallery-container0 img {
+  width: 560px; /* Ocupa todo el espacio disponible */
+  height: 400px; /* Mantiene la proporción */
+  object-fit: cover; /* Asegura que la imagen se ajuste al contenedor */
+  border: none;
+}
+
+.gallery-container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  gap: 20px; /* Espacio entre las imágenes */
+  padding: 20px; /* Espaciado interno */
+  max-width: 1200px; /* Ancho máximo de la galería */
+  margin: 0 auto; /* Centrar la galería */
+  margin-top: 260px; /* Cambia este valor */
+}
+
+/* Imágenes de la galería */
+.gallery-container2 img {
+  width: 560px; /* Ocupa todo el espacio disponible */
+  height: 400px; /* Mantiene la proporción */
+  object-fit: cover; /* Asegura que la imagen se ajuste al contenedor */
+  border: none;
+}
+
+.gallery-container3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  gap: 20px; /* Espacio entre las imágenes */
+  padding: 20px; /* Espaciado interno */
+  max-width: 1200px; /* Ancho máximo de la galería */
+  margin: 0 auto; /* Centrar la galería */
+  margin-top: 260px; /* Cambia este valor */
+}
+
+/* Imágenes de la galería */
+.gallery-container3 img {
+  width: 560px; /* Ocupa todo el espacio disponible */
+  height: 400px; /* Mantiene la proporción */
+  object-fit: cover; /* Asegura que la imagen se ajuste al contenedor */
+  border: none;
+}
+
 /* Responsivo */
 @media (max-width: 768px) {
 .gallery-item {
@@ -723,6 +783,9 @@ text-align: justify; /* Justifica el texto */
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+  .custom-button4{
+    margin-bottom: 30px;
+  }
   header {
       flex-wrap: wrap;
       padding: 10px;
@@ -766,12 +829,49 @@ text-align: justify; /* Justifica el texto */
   border-radius: 50px;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
+.custom-button2 {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 10px 40px;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.custom-button3 {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 10px 40px;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.custom-button4 {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 10px 40px;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
 .custom-button:hover {
   background-color: #333; /* Cambia ligeramente el tono al pasar el cursor */
   transform: scale(1.05); /* Amplía ligeramente el botón */
 }
-
+.custom-button2:hover {
+  background-color: #333; /* Cambia ligeramente el tono al pasar el cursor */
+  transform: scale(1.05); /* Amplía ligeramente el botón */
+}
+.custom-button:hover {
+  background-color: #333; /* Cambia ligeramente el tono al pasar el cursor */
+  transform: scale(1.05); /* Amplía ligeramente el botón */
+}
 /*<<<<<<<<<<<<<<<<<<<  libros >>>>>>>>>>>>>*/
 
 .libros p {
@@ -833,7 +933,7 @@ text-align: justify; /* Justifica el texto */
 }
 
 /* Texto e Imagen */
-.texto-e-imagen {
+.texto2-e-imagen {
     display: flex;
     flex-direction: column;
     margin-left: 100px;
@@ -842,7 +942,7 @@ text-align: justify; /* Justifica el texto */
     margin-top: 100px;
 }
 
-.texto {
+.texto2 {
     max-width: 500px;
 }
 
@@ -965,8 +1065,12 @@ button.btn:hover {
 
 /* Ocultar menú en pantallas pequeñas */
 @media (max-width: 768px) {
+  .gallery-container3{
+    margin-left: 0px;
+  }
+
   .gallery-container{
-    margin-right: 300px;
+    margin-right: 10px;
   }
     .button-container {
       flex-direction: column; /* Coloca los botones en columna */
@@ -975,19 +1079,26 @@ button.btn:hover {
       gap: 15px; /* Reduce el espacio entre los botones */
     }
   
-    .custom-button {
+    .custom-button2 {
       padding: 8px 15px; /* Reduce el tamaño del botón */
       font-size: 0.875rem; /* Reduce el tamaño del texto */
       border-radius: 50px; /* Ajusta el radio de los bordes */
       margin-bottom: 14px;
-      margin-right: -120px;
+      margin-right: 0px;
+    }
+    .custom-button3 {
+      padding: 8px 15px; /* Reduce el tamaño del botón */
+      font-size: 0.875rem; /* Reduce el tamaño del texto */
+      border-radius: 50px; /* Ajusta el radio de los bordes */
+      margin-bottom: 14px;
+      margin-right: 200px;
     }
   
-  .texto{
+  .texto1{
       margin-left: -250px; /* Márgen izquierdo */
       margin-right: 650px; /* Márgen derecho */    
   }
-  .texto p{
+  .texto1 p{
     font-size: 1.4rem;   
 }
   .overlay {
@@ -1071,10 +1182,12 @@ button.btn:hover {
 
 .text-section h1 {
   font-size: 2rem; /* Reducir tamaño del título */
+  margin-right: 50px;
 }
 
 .text-section p {
   font-size: 1rem; /* Reducir tamaño del texto */
+  margin-right: 90px;
 }
 }
 
