@@ -309,10 +309,8 @@ padding: 20px;
 
 .text-overlay-content p {
 font-family: 'Roboto', sans-serif;
-font-size: 1rem;
+font-size: 2rem;
 line-height: 1.4;
-
-
 }
 
 /*<<<<<<<<<<<<<<<<<<<< La salud como arte y ciencia >>>>>>>>>>>>>>>>>>>>>*/
@@ -1053,6 +1051,13 @@ button.btn:hover {
 
 /* Ocultar menú en pantallas pequeñas */
 @media (max-width: 768px) {
+
+  .text-overlay-content p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    }
+
   .custom-button21 {
     display: inline-block;
     background-color: black;
