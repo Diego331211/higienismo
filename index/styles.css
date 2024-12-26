@@ -1179,7 +1179,8 @@ button.btn:hover {
   }
 
   .gallery-item {
-    width: 100%; /* Asegura que cada elemento ocupe todo el ancho del contenedor */
+    width: 70%;
+    margin-left: -70px; /* Asegura que cada elemento ocupe todo el ancho del contenedor */
   }
   .about-text{
     margin-top: 10px;
