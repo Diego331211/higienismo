@@ -177,7 +177,7 @@ body {
 /* Galería de redes sociales */
 .social-media-section {
   text-align: center;
-  margin: 50px auto;
+  margin-top: -100px;
   padding: 20px;
 }
 
@@ -1063,6 +1063,12 @@ text-align: justify; /* Justifica el texto */
 
 /* Ocultar menú en pantallas pequeñas */
 @media (max-width: 768px) {
+  .accordion-item{
+    margin-left: -0.5px;
+  }
+  .science-section{
+    margin-top: -130px;
+  }
   
   .texto2-e-imagen {
     margin-left: -190px;
