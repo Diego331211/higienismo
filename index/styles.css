@@ -1056,9 +1056,10 @@ button.btn:hover {
     }
 
   .text-overlay-content p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 0,1rem;
-    line-height: 1.4;
+      font-family: 'Roboto', sans-serif;
+      font-size: 0.1rem;
+      line-height: 1;
+      color: #ffffff;
     }
 
   .custom-button21 {
