@@ -1119,7 +1119,8 @@ text-align: justify; /* Justifica el texto */
   }
 
   .social-media-gallery{
-    height: 100%;
+    width: auto;
+    height: 700px;
     flex-direction: column; /* Cambia la dirección del flexbox a columna */
     align-items: center; /* Centra las imágenes horizontalmente */
     margin-left: 70px;
