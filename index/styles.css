@@ -88,6 +88,7 @@ body {
 }
 
 @media (max-width: 768px) {
+
   .menu-toggle {
       display: block;
   }
@@ -287,30 +288,33 @@ line-height: 1.8;
 color: #000000;
 }
 
+
+
 .text-overlay-section {
-position: relative;
-background-image: url('assets/que2.svg'); /* Ruta de la imagen */
-background-size: cover; /* Escala la imagen para que ocupe todo el fondo */
-background-repeat: no-repeat; /* Evita que la imagen se repita */
-background-position: center; /* Centra la imagen */ /* Asegúrate de que el archivo de imagen esté en el mismo directorio o ajusta la ruta */
-height: 130vh; /* Ajusta la altura según lo necesites */
-display: flex;
-align-items: center;
-justify-content: center;
-padding: 20px;
-color: white; /* Color del texto */
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-image: url('assets/que2.svg'); /* Ruta de la imagen de fondo */
+  background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+  background-position: center; /* Centra la imagen */
+  
 }
 
-.text-overlay-content {
-max-width: 800px;
-text-align: center;
-padding: 20px;
-}
-
-.text-overlay-content p {
-font-family: 'Roboto', sans-serif;
-font-size: 2rem;
-line-height: 1.4;
+.text-overlay-section p {
+  margin-top: 90px;
+  position: relative; /* Necesario para superposición */
+  padding: 100px;
+  border-radius: 8px; /* Bordes redondeados */
+  max-width: 1800px;
+color: #ffffff;
+font-size: 2rem; /* Tamaño inicial más grande */
+  line-height: 1.2; /* Espaciado entre líneas para mejor legibilidad */
+  text-align: center;
+  
 }
 
 /*<<<<<<<<<<<<<<<<<<<< La salud como arte y ciencia >>>>>>>>>>>>>>>>>>>>>*/
@@ -554,10 +558,7 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para la imagen */
 /* Responsivo */
 @media (max-width: 428px) {
 
-  .text-overlay-section{
-    background-size: contain; /* Escala la imagen para que se ajuste al ancho o alto */
-    background-position: center top; /* Ajusta la posición de la imagen */
-}
+
 .content-wrapper {
   flex-direction: column; /* Cambiar a diseño vertical */
   gap: 30px;
@@ -902,103 +903,113 @@ text-align: justify; /* Justifica el texto */
   
 
   /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< contacto >>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-  body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-
-.contenedor-principal {
-    width: 90%;
-    max-width: 1200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-/* Texto e Imagen */
-.texto2-e-imagen {
-    display: flex;
-    flex-direction: column;
-    margin-left: 30px;
-    gap: 100px;
-    text-align: center;
-    margin-top: 100px;
-}
-
-.texto2 {
-    max-width: 500px;
-}
-
-.imagen img {
+  /* Estilo para el contenedor principal */
+  .contenedor-principal {
+    margin-top: 50px;
+    margin-left: 70px;
     width: 100%;
-    max-width: 400px;
-    border-radius: 8px;
-}
-
-/* Formulario */
-.formulario {
-  margin-left: -390px;
-    width: 100%;
-    max-width: 600px;
-    background-color: white;
     padding: 20px;
-    border-radius: 1000px;
-}
-
-.input-group {
-    margin-bottom: 20px;
-}
-
-.input-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.input-duo {
     display: flex;
-    gap: 10px;
-}
-
-.input-duo input {
-    flex: 1;
-}
-
-input,
-textarea {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  /* Contenedor para el texto, formulario e imagen */
+  .texto2-e-imagen {
+    display: flex;
+    justify-content: space-between; /* Separa las dos columnas */
+    align-items: flex-start; /* Alinea elementos al inicio */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
+    max-width: 1200px;
+    gap: 50px; /* Espacio entre columnas */
+  }
+  
+  /* Texto y formulario juntos */
+  .texto-formulario {
+    flex: 2; /* Ocupa más espacio que la imagen */
+    display: flex;
+    flex-direction: column; /* Apila texto y formulario */
+    gap: 20px; /* Espacio entre el texto y el formulario */
+  }
+  
+  .texto2 {
+    max-width: 100%;
+  }
+  
+  .formulario {
+    max-width: 100%;
+  }
+  
+  .imagen img {
+    margin-top: 100px;
+    width: 80%; /* Asegura que la imagen se ajuste al contenedor */
+    height: 200%;
+    border-radius: 10px;
+
+  }
+  
+/* Estilo para el texto */
+.texto2 {
+  flex: 1; /* Ocupa un espacio proporcional */
+  max-width: 600px;
 }
 
-textarea {
-    resize: none;
-    height: 100px;
+.texto2 h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
-button.btn {
-    display: inline-block;
-    width: 100%;
-    padding: 10px 15px;
-    background-color: #000;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: background-color 0.3s;
+.texto2 p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
 }
 
-button.btn:hover {
-    background-color: #333;
+.texto2 p strong {
+  font-weight: bold;
 }
+
+/* Estilo para el formulario */
+.formulario {
+  flex: 1; /* Ocupa un espacio proporcional */
+  max-width: 600px;
+}
+
+.formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espacio entre elementos del formulario */
+}
+
+.formulario .input-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.formulario .input-group input,
+.formulario .input-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.formulario .btn {
+  background-color: #000000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulario .btn:hover {
+  background-color: #333333;
+}
+
+
 
 /* Estilo para el botón del menú */
 .menu-toggle {
@@ -1051,9 +1062,67 @@ button.btn:hover {
 
 /* Ocultar menú en pantallas pequeñas */
 @media (max-width: 768px) {
-  .text-overlay-content  {
-    margin-top: -800px;
-    }
+  
+  .texto2-e-imagen {
+    margin-left: -190px;
+     /* Permite que los elementos se ajusten automáticamente */
+     /* Espaciado interno para evitar desbordamiento */
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
+  }
+  
+  /* Texto y formulario */
+  .texto-formulario {
+    flex: 1 1 50%; /* Ocupa el 50% del ancho disponible */
+  max-width: 80%; /* Asegura que no se desborde */ /* Espaciado interno */
+
+    margin: 0 auto; /* Centra el contenido dentro del contenedor */
+    padding: 10px; /* Espaciado interno */
+  }
+  
+  /* Imagen */
+  .imagen {
+
+    margin: 0 auto; /* Centra la imagen */
+  }
+  
+  .imagen img {
+    margin-left: 30px;
+    height: auto;
+    margin-top: -20px; /* Añade un espaciado superior */
+  }
+
+  .text-overlay-section {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-image: url('assets/que2.svg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+    background-position: center; /* Centra la imagen */
+    
+  }
+  
+  .text-overlay-section p {
+    position: relative; /* Necesario para superposición */
+    padding: 100px;
+    border-radius: 8px; /* Bordes redondeados */
+    max-width: 1800px;
+  color: #ffffff;
+  font-size: 0.5rem; /* Tamaño inicial más grande */
+    line-height: 0.5; /* Espaciado entre líneas para mejor legibilidad */
+    text-align: center;
+    
+  }
+
+  .social-media-gallery{
+    flex-direction: column; /* Cambia la dirección del flexbox a columna */
+    align-items: center; /* Centra las imágenes horizontalmente */
+    margin-left: 70px;
+  }
+  
 
   .text-overlay-content p {
       font-family: 'Roboto', sans-serif;
@@ -1161,17 +1230,13 @@ button.btn:hover {
     margin-left: 30px; /* Márgen izquierdo */
     margin-right: 30px; /* Márgen derecho */
   }
-  .formulario {
-    margin-left: 30;
-    padding: 15px; /* Reduce el padding en pantallas pequeñas */
-    border-radius: 15px; /* Ajusta el radio del borde */
-  }
 
   .input-duo {
     flex-direction: column; /* Cambia a disposición vertical en pantallas pequeñas */
     gap: 5px; /* Reduce el espacio entre inputs */
   }
   .gallery-container {
+    margin-left: 60px;
     display: flex;
     flex-direction: column; /* Cambia la dirección de las opciones a vertical */
     gap: 20px; /* Espaciado entre los elementos */
@@ -1246,7 +1311,34 @@ button.btn:hover {
   font-size: 1rem; /* Reducir tamaño del texto */
   margin-right: 90px;
 }
+
+  .text-overlay-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-image: url('assets/que2.svg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+  }
+  
+  .text-overlay-section p {
+    position: relative; /* Necesario para superposición */
+    padding: 20px; /* Reduce el padding para pantallas pequeñas */
+    border-radius: 8px; /* Bordes redondeados */
+    max-width: 90%; /* Limita el ancho del texto al 90% del contenedor */
+    color: #ffffff;
+    font-size: 1rem; /* Ajusta el tamaño del texto a algo más legible */
+    line-height: 1.5; /* Espaciado entre líneas */
+    text-align: center;
+    margin: 0; /* Elimina márgenes adicionales */
+  }
 }
+
 
 /* Ajustes para la barra de navegación */
 .header-nav {
