@@ -693,7 +693,7 @@ text-align: justify; /* Justifica el texto */
   padding: 20px; /* Espaciado interno */
   max-width: 1200px; /* Ancho máximo de la galería */
   margin: 0 auto; /* Centrar la galería */
-  margin-top: 45px; /* Cambia este valor */
+  margin-top: 105px; /* Cambia este valor */
 }
 
 /* Imágenes de la galería */
@@ -1245,7 +1245,7 @@ text-align: justify; /* Justifica el texto */
     gap: 5px; /* Reduce el espacio entre inputs */
   }
   .gallery-container {
-    margin-left: 10px;
+    margin-left: 30px;
     display: flex;
     flex-direction: column; /* Cambia la dirección de las opciones a vertical */
     gap: 20px; /* Espaciado entre los elementos */
