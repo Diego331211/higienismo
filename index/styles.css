@@ -293,11 +293,7 @@ background-image: url('assets/que2.svg'); /* Ruta de la imagen */
 background-size: cover; /* Escala la imagen para que ocupe todo el fondo */
 background-repeat: no-repeat; /* Evita que la imagen se repita */
 background-position: center; /* Centra la imagen */ /* Asegúrate de que el archivo de imagen esté en el mismo directorio o ajusta la ruta */
-background-size: contain;
-background-position: no-repeat;
-background-position: center; /* Centra la imagen */
 height: 130vh; /* Ajusta la altura según lo necesites */
-margin-bottom: none;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -313,7 +309,7 @@ padding: 20px;
 
 .text-overlay-content p {
 font-family: 'Roboto', sans-serif;
-font-size: 0.8rem;
+font-size: 2rem;
 line-height: 1.4;
 
 
@@ -408,7 +404,7 @@ min-height: 100vh;
 display: flex;
 justify-content: center;
 align-items: flex-start;
-padding: 90px;
+padding: 40px;
 }
 
 .text-content {
@@ -549,6 +545,7 @@ flex: 1; /* Ocupa menos espacio */
 }
 
 .image-section img {
+  margin-top: 45px;
 width: 330px;
 height: 20%;
 border-radius: 12px; /* Bordes redondeados */
@@ -558,12 +555,6 @@ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para la imagen */
 
 /* Responsivo */
 @media (max-width: 428px) {
-
-  .text-overlay-content p {
-    font-size: 0.8rem;
-    margin-top: -610px;
-    
-    }
 
   .text-overlay-section{
     background-size: contain; /* Escala la imagen para que se ajuste al ancho o alto */
@@ -702,12 +693,12 @@ text-align: justify; /* Justifica el texto */
   padding: 20px; /* Espaciado interno */
   max-width: 1200px; /* Ancho máximo de la galería */
   margin: 0 auto; /* Centrar la galería */
-  margin-top: 260px; /* Cambia este valor */
+  margin-top: 45px; /* Cambia este valor */
 }
 
 /* Imágenes de la galería */
 .gallery-container img {
-  width: 560px; /* Ocupa todo el espacio disponible */
+  max-width: 100%; /* Limita el ancho máximo de la imagen al contenedor */
   height: 400px; /* Mantiene la proporción */
   object-fit: cover; /* Asegura que la imagen se ajuste al contenedor */
   border: none;
@@ -742,7 +733,7 @@ text-align: justify; /* Justifica el texto */
   padding: 20px; /* Espaciado interno */
   max-width: 1200px; /* Ancho máximo de la galería */
   margin: 0 auto; /* Centrar la galería */
-  margin-top: 260px; /* Cambia este valor */
+  margin-top: 100px; /* Cambia este valor */
 }
 
 /* Imágenes de la galería */
@@ -774,17 +765,12 @@ text-align: justify; /* Justifica el texto */
 }
 
 /* Responsivo */
-@media (max-width: 768px) {
-.gallery-item {
-    width: 100%;
-    height: auto;
-}
-}
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .custom-button4{
     margin-bottom: 30px;
+    margin-right: -20px;
   }
   header {
       flex-wrap: wrap;
@@ -875,7 +861,7 @@ text-align: justify; /* Justifica el texto */
 /*<<<<<<<<<<<<<<<<<<<  libros >>>>>>>>>>>>>*/
 
 .libros p {
-  margin-top: 500px;
+  margin-top: 100px;
   margin-left: 300px;
   margin-right: -900px;
 
@@ -913,6 +899,7 @@ text-align: justify; /* Justifica el texto */
     margin-left: 30px; /* Ajusta el margen para posicionar el botón */
     margin-top: 20px;
     margin-bottom: 10px;
+    
   }
   
 
@@ -937,7 +924,7 @@ text-align: justify; /* Justifica el texto */
 .texto2-e-imagen {
     display: flex;
     flex-direction: column;
-    margin-left: 100px;
+    margin-left: 30px;
     gap: 100px;
     text-align: center;
     margin-top: 100px;
@@ -1066,12 +1053,78 @@ button.btn:hover {
 
 /* Ocultar menú en pantallas pequeñas */
 @media (max-width: 768px) {
+  .custom-button21 {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 5px 25px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  .custom-button4 {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 5px 25px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .gallery-container0 img {
+    width: 560px; /* Ocupa todo el espacio disponible */
+    max-width: 100%;
+    display: block;
+    height: 400px; /* Mantiene la proporción */
+    object-fit: cover; /* Asegura que la imagen se ajuste al contenedor */
+    border: none;
+  }
+  .gallery-container2 img {
+    width: 560px; /* Ocupa todo el espacio disponible */
+    max-width: 100%;
+    display: block;
+    height: 400px; /* Mantiene la proporción */
+    object-fit: cover; /* Asegura que la imagen se ajuste al contenedor */
+    border: none;
+  }
+  .gallery-container3 img {
+    width: 560px; /* Ocupa todo el espacio disponible */
+    max-width: 100%;
+    display: block;
+    height: 400px; /* Mantiene la proporción */
+    object-fit: cover; /* Asegura que la imagen se ajuste al contenedor */
+    border: none;
+  }
+  .gallery-item {
+    width: 30px;
+    height:30px ;
+}
+  .text-content {
+    margin-left: -10px;
+    width: 90%; /* Ajusta el ancho al 90% de la pantalla */
+    margin: 10px auto; /* Centra horizontalmente */
+    padding: 20px; /* Espaciado interno */
+    background: rgba(0, 0, 0, 0.6); /* Fondo gris */
+    border-radius: 8px; /* Bordes redondeados */
+  }
+  .text-overlay-content p {
+    font-size: 1.5rem;
+    }
   .gallery-container3{
     margin-left: 0px;
   }
 
   .gallery-container{
-    margin-right: 10px;
+    width: 400px;
+    height: 500px;
+  }
+  .gallery-item img {
+    width: 100%; /* Asegura que la imagen ocupe el ancho completo */
+    height: 100%; /* Ajusta el alto visible */
+    object-fit: cover; /* Recorta y ajusta la imagen */
   }
     .button-container {
       flex-direction: column; /* Coloca los botones en columna */
@@ -1103,7 +1156,7 @@ button.btn:hover {
     margin-right: 30px; /* Márgen derecho */
   }
   .formulario {
-    margin-left: 100;
+    margin-left: 30;
     padding: 15px; /* Reduce el padding en pantallas pequeñas */
     border-radius: 15px; /* Ajusta el radio del borde */
   }
