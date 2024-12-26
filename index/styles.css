@@ -182,7 +182,7 @@ body {
 }
 
 .social-media-gallery {
-  height: 100%;
+
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 20px;
@@ -1119,6 +1119,7 @@ text-align: justify; /* Justifica el texto */
   }
 
   .social-media-gallery{
+    height: 100%;
     flex-direction: column; /* Cambia la dirección del flexbox a columna */
     align-items: center; /* Centra las imágenes horizontalmente */
     margin-left: 70px;
