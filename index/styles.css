@@ -182,6 +182,7 @@ body {
 }
 
 .social-media-gallery {
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 20px;
@@ -1236,7 +1237,7 @@ text-align: justify; /* Justifica el texto */
     gap: 5px; /* Reduce el espacio entre inputs */
   }
   .gallery-container {
-    margin-left: 60px;
+    margin-left: 10px;
     display: flex;
     flex-direction: column; /* Cambia la dirección de las opciones a vertical */
     gap: 20px; /* Espaciado entre los elementos */
@@ -1328,7 +1329,7 @@ text-align: justify; /* Justifica el texto */
   
   .text-overlay-section p {
     position: relative; /* Necesario para superposición */
-    padding: 20px; /* Reduce el padding para pantallas pequeñas */
+    padding: 0px; /* Reduce el padding para pantallas pequeñas */
     border-radius: 8px; /* Bordes redondeados */
     max-width: 90%; /* Limita el ancho del texto al 90% del contenedor */
     color: #ffffff;
