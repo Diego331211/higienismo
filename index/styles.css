@@ -1052,7 +1052,7 @@ button.btn:hover {
 /* Ocultar menú en pantallas pequeñas */
 @media (max-width: 768px) {
   .text-overlay-content  {
-    margin-top: -900px;
+    margin-top: -800px;
     }
 
   .text-overlay-content p {
