@@ -1235,7 +1235,7 @@ text-align: justify; /* Justifica el texto */
     gap: 5px; /* Reduce el espacio entre inputs */
   }
   .gallery-container {
-    margin-left: 31px;
+    margin-left: 20px;
     display: flex;
     flex-direction: column; /* Cambia la dirección de las opciones a vertical */
     gap: 20px; /* Espaciado entre los elementos */
