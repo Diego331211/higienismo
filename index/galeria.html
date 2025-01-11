@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galería</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="galeria-page">
@@ -15,7 +19,16 @@
             ☰
         </button>
         <ul class="menu">
-            <li><a href="index.html" class="active">MAURICIO ESTEBAN</a></li>
+            <li>
+                <a href="index.html" class="active">MAURICIO ESTEBAN</a
+                ><a
+                  href="https://www.youtube.com/@higienismointegral1143"
+                  target="_blank"
+                  class="youtube-icon"
+                >
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </li>
             <li><a href="index.html">Home</a></li>
             <li><a href="higienismo.html">¿Qué es el higienismo?</a></li>
             <li><a href="salud.html">La Salud como Arte y Ciencia</a></li>
@@ -30,11 +43,11 @@
     <div class="gallery-container">
         <div class="gallery-item" onclick="window.location.href='seminarios.html'">
           <img src="assets/home4.png" alt="Galería Uno">
-          <div class="overlay-text">Seminarios</div>
+          <div class="overlay-text">Libros</div>
         </div>
         <div class="gallery-item" onclick="window.location.href='Libros.html'">
             <img src="assets/home3.png" alt="Galería Dos">
-            <div class="overlay-text">Libros</div>
+            <div class="overlay-text">Seminarios</div>
           </div>
           <div class="gallery-item" onclick="window.location.href='entrevistas.html'">
             <img src="assets/home5.png" alt="Galería Tres">

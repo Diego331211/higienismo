@@ -1,65 +1,85 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>La Salud como Arte y Ciencia</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
- <!-- Encabezado -->
- <header id="main-header">
-    <nav class="header-nav">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Encabezado -->
+    <header id="main-header">
+      <nav class="header-nav">
         <!-- Botón de menú hamburguesa -->
-        <button class="menu-toggle" aria-label="Abrir menú">
-            ☰
-        </button>
+        <button class="menu-toggle" aria-label="Abrir menú">☰</button>
         <ul class="menu">
-            <li><a href="index.html" class="active">MAURICIO ESTEBAN</a></li>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="higienismo.html">¿Qué es el higienismo?</a></li>
-            <li><a href="salud.html">La Salud como Arte y Ciencia</a></li>
-            <li><a href="testimonio.html">Testimonios</a></li>
-            <li><a href="about.html">Acerca de</a></li>
-            <li><a href="galeria.html">Galería</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+          <li>
+            <a href="index.html" class="active">MAURICIO ESTEBAN</a
+            ><a
+              href="https://www.youtube.com/@higienismointegral1143"
+              target="_blank"
+              class="youtube-icon"
+            >
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="higienismo.html">¿Qué es el higienismo?</a></li>
+          <li><a href="salud.html">La Salud como Arte y Ciencia</a></li>
+          <li><a href="testimonio.html">Testimonios</a></li>
+          <li><a href="about.html">Acerca de</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
         </ul>
-    </nav>
-</header>
+      </nav>
+    </header>
 
     <!-- Sección principal -->
     <section class="science-section">
-        <div class="science-content">
-            <h1>La Salud como Arte y Ciencia: Mauricio Esteban, Pionero del Higienismo Integral</h1>
-            <p>
-                Descubre el legado de Mauricio Esteban, Bioterapeuta Proactivo Integral, autor, conferencista y creador del Higienismo Integral, 
-                un sistema revolucionario que ha transformado vidas alrededor del mundo.
-            </p>
-            <ul>
-                <li>Explora su trayectoria.</li>
-                <li>Conoce sus obras.</li>
-                <li>Agenda una consulta o conferencia.</li>
-            </ul>
-        </div>
+      <div class="science-content">
+        <h1>
+          La Salud como Arte y Ciencia: Mauricio Esteban, Pionero del Higienismo
+          Integral
+        </h1>
+        <p>
+          Descubre el legado de Mauricio Esteban, Bioterapeuta Proactivo
+          Integral, autor, conferencista y creador del Higienismo Integral, un
+          sistema revolucionario que ha transformado vidas alrededor del mundo,
+          cientos de personas desahuciadas han recuperado su salud y miles la
+          mantienen firme de forma permanente.
+        </p>
+        <ul>
+          <li>Explora su trayectoria.</li>
+          <li>Conoce sus obras.</li>
+          <li>Agenda una consulta o conferencia.</li>
+        </ul>
+      </div>
     </section>
     <!-- Script para controlar el menú -->
     <script>
-        // Seleccionar el botón de menú y el contenedor del menú
-        const menuToggle = document.querySelector('.menu-toggle');
-        const menu = document.querySelector('.menu');
+      // Seleccionar el botón de menú y el contenedor del menú
+      const menuToggle = document.querySelector(".menu-toggle");
+      const menu = document.querySelector(".menu");
 
-        // Agregar evento de clic para alternar el menú
-        menuToggle.addEventListener('click', () => {
-            menu.classList.toggle('show'); // Alternar clase "show"
+      // Agregar evento de clic para alternar el menú
+      menuToggle.addEventListener("click", () => {
+        menu.classList.toggle("show"); // Alternar clase "show"
 
-            // Cambiar el ícono del botón
-            if (menu.classList.contains('show')) {
-                menuToggle.textContent = '✖'; // Cambiar a "X" para cerrar
-            } else {
-                menuToggle.textContent = '☰'; // Cambiar a hamburguesa
-            }
-        });
+        // Cambiar el ícono del botón
+        if (menu.classList.contains("show")) {
+          menuToggle.textContent = "✖"; // Cambiar a "X" para cerrar
+        } else {
+          menuToggle.textContent = "☰"; // Cambiar a hamburguesa
+        }
+      });
     </script>
-</body>
+  </body>
 </html>

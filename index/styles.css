@@ -11,47 +11,18 @@ body {
 
 /* Estilo general del header */
 
-
-
-/* Estilo del contenedor interno del header */
-.header-inner {
-display: flex;
-justify-content: space-between; /* Espacia el título y el menú */
-align-items: center;
-width: 100%;
-}
-
-/* Estilo del menú de navegación */
-.header-nav ul {
-list-style: none; /* Elimina puntos de lista */
-display: flex; /* Alinea opciones en fila */
-gap: 20px; /* Espacio entre opciones */
-margin: 0;
-padding: 0;
-}
-
-.header-nav ul li a {
-font-size: 0.7rem; /* Tamaño de texto */
-font-family: 'Arial', sans-serif; /* Fuente personalizada */
-color: black; /* Color negro */
-transition: color 0.3s ease; /* Efecto al pasar el mouse */
-}
-
-.header-nav ul li a.active {
-text-decoration: underline; /* Subraya la opción activa */
-}
-
-.header-nav ul li {
-margin-top: 0px; /* Baja ligeramente las opciones */
-}
-
 /* Ajuste especial para "MAURICIO ESTEBAN" */
 .header-nav ul li:first-child a {
 font-size: 1.7rem; /* Tamaño más grande */
-margin-right: 105px; /* Espacio extra hacia la derecha */
+margin-right: 40px; /* Espacio extra hacia la derecha */
 color: rgb(5, 5, 5);
 text-decoration: none; /* Elimina el subrayado */
+  align-items:flex-end ; /* Baja el contenido del lado izquierdo */
 }
+.menu li:not(:first-child) {
+  margin-top: 8px; /* Baja los demás elementos */
+}
+
 
 /* APPOINTMENT SECTION */ /*HOME*/
 /* General Styles */
@@ -73,42 +44,14 @@ body {
   cursor: pointer;
 }
 
-.header-nav .menu {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
 
-.header-nav .menu li a {
-  text-decoration: none;
+.youtube-icon{
   color: black;
-  font-size: 1rem;
+  font-size: 4rem;
 }
 
-@media (max-width: 768px) {
 
-  .menu-toggle {
-      display: block;
-  }
 
-  .header-nav .menu {
-      display: none;
-      flex-direction: column;
-      background: white;
-      position: absolute;
-      top: 60px;
-      right: 0;
-      width: 100%;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-  }
-
-  .header-nav .menu.show {
-      display: flex;
-  }
-}
 
 /* Sección principal */
 .appointment-section {
@@ -339,13 +282,7 @@ z-index: 1000;
 backdrop-filter: blur(3px);
 }
 
-.header-nav ul {
-list-style: none;
-display: flex;
-gap: 20px;
-margin: 0;
-padding: 0;
-}
+
 
 .header-nav ul li a {
 text-decoration: none;
@@ -832,6 +769,16 @@ text-align: justify; /* Justifica el texto */
   border-radius: 50px;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
+.custom-button21 {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 10px 40px;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
 .custom-button3 {
   display: inline-block;
   background-color: black;
@@ -1030,16 +977,6 @@ text-align: justify; /* Justifica el texto */
   padding: 10px;
 }
 
-/* Estilo para el menú en dispositivos angostos */
-.header-nav .menu {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
 /* Por defecto, el menú se oculta en pantallas pequeñas */
 
 /* Estilo para el botón del menú */
@@ -1056,20 +993,19 @@ text-align: justify; /* Justifica el texto */
   position: relative;
 }
 
-/* Menú desplegable */
-.header-nav .menu {
-  text-align: left;
-  justify-content: left;
-  display: flex; /* Mostrar siempre en pantallas grandes */
-  flex-direction: row;
-  gap: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+
 
 /* Ocultar menú en pantallas pequeñas */
 @media (max-width: 768px) {
+
+  .hero .hero-content h1 {
+    font-size: 3.5rem; /* Tamaño del título */
+    font-family: 'Roboto', sans-serif; /* Fuente personalizada */
+    color: rgb(255, 255, 255); /* Texto blanco */
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.7); /* Sombra para contraste */
+    margin: 0px;
+    margin-top: 150px;
+    }
   .accordion-item{
     margin-left: -0.5px;
   }
@@ -1347,16 +1283,6 @@ text-align: justify; /* Justifica el texto */
     text-align: center;
     margin: 0; /* Elimina márgenes adicionales */
   }
-}
-
-
-/* Ajustes para la barra de navegación */
-.header-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap; /* Evita que el contenido se desplace a una nueva fila */
-  overflow: hidden; /* Evita desbordamiento visual */
 }
 
 /* Ajustes para el menú */
