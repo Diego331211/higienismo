@@ -1,0 +1,166 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin-top: 150px;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom, #9a68ff, #d9b3ff);
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  /* Header styles */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .logo {
+    max-height: 40px;
+  }
+  
+  .nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .language-selector {
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+  }
+  
+  /* Main content styles */
+  .main-content {
+    margin-top: 120px;
+  }
+  .main-content h1 {
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+  .highlight {
+    color: #3d0590; /* Cambia este valor al color que desees */
+  }
+  
+  
+  .main-content p {
+    font-size: 1.2rem;
+    margin-top: 50px;
+    margin-left: 250px;
+    margin-right: 250px;
+  }
+  
+  .buttons {
+    margin-top: 100px;
+    margin: 30px;
+  }
+
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .btn.primary {
+    background-color: #6200ea;
+    color: #fff;
+    margin-right: 30px;
+  }
+  
+  .btn.primary:hover {
+    background-color: #4a00c9;
+  }
+  
+  .btn.secondary {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    margin-left: 30px;
+  }
+  
+  .btn.secondary:hover {
+    background-color: #fff;
+    color: #6200ea;
+  }
+  img {
+    width: 160px; /* Cambia este valor para ajustar el tamaño */
+    height: auto; /* Mantiene la proporción original */
+    display: block; /* Asegura que se comporte como un bloque */
+    margin: auto; /* Centra horizontalmente dentro de su contenedor */
+    margin-top: 30px;
+    position: relative; /* Permite superponerla sobre el fondo */
+    z-index: 1; /* Asegura que esté por encima del fondo */
+    background: transparent; /* Elimina cualquier fondo blanco */
+  }
+  
+  /* Para el contenedor de la imagen */
+  div {
+    position: relative; /* Asegura que el contenedor pueda contener la imagen */
+    text-align: center; /* Centra el contenido dentro del div */
+    background: none; /* Elimina cualquier fondo en el div */
+  }
+  
+  /* Responsive styles for small screens */
+  @media (max-width: 768px) {
+
+    .btn.primary {
+        background-color: #6200ea;
+        color: #fff;
+        margin-right: 0px;
+      }
+      
+      .btn.primary:hover {
+        background-color: #4a00c9;
+      }
+      
+      .btn.secondary {
+        background-color: transparent;
+        border: 2px solid #fff;
+        color: #fff;
+        margin-left: 0px;
+      }
+      .main-content{
+        margin-top: 150px;
+      }
+    .main-content h1 {
+      font-size: 1.5rem;
+    }
+  
+    .main-content p {
+        font-size: 1.2rem;
+        margin-top: 50px;
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+  
+    .btn {
+      width: 90%;
+      margin-bottom: 10px;
+    }
+  
+    .nav {
+      flex-direction: column;
+    }
+  
+    .nav a {
+      margin: 5px 0;
+    }
+  
+    .language-selector {
+      margin-top: 10px;
+    }
+  }
+  

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="credits.css">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agenda una cita con Mauricio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Encabezado -->
+    <header id="main-header">
+      <nav class="header-nav">
+        <!-- Botón de menú hamburguesa -->
+        <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+        <ul class="menu">
+          <li>
+            <a href="index.html" class="active">MAURICIO ESTEBAN</a
+            ><a
+              href="https://www.youtube.com/@higienismointegral1143"
+              target="_blank"
+              class="youtube-icon"
+            >
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="higienismo.html">¿Qué es el higienismo?</a></li>
+          <li><a href="salud.html">La Salud como Arte y Ciencia</a></li>
+          <li><a href="testimonio.html">Testimonios</a></li>
+          <li><a href="about.html">Acerca de</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <main class="main-content">
+      <h1>Thank you for trusting <span class="highlight">Botopía Technology S.A.S!</span></h2></h1>
+      <p>
+        This site was developed with customized technology by our team at Botopía, 
+        connecting companies with innovative solutions. We create unique digital 
+        experiences that drive business growth like yours.
+      </p>
+      <div class="buttons">
+        <a href="https://www.botopia.tech/" class="btn primary">Learn more about Botopia</a>
+        <a href="https://www.botopia.tech/" class="btn secondary">Contact us for your project</a>
+      </div>
+      <div>
+        <img src="assets/botopia.png" alt="logo_botopia">
+      </div>
+    </main>
+  </div>
+  <!-- Script para controlar el menú -->
+  <script>
+    // Seleccionar el botón de menú y el contenedor del menú
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".menu");
+
+    // Agregar evento de clic para alternar el menú
+    menuToggle.addEventListener("click", () => {
+      menu.classList.toggle("show"); // Alternar clase "show"
+
+      // Cambiar el ícono del botón
+      if (menu.classList.contains("show")) {
+        menuToggle.textContent = "✖"; // Cambiar a "X" para cerrar
+      } else {
+        menuToggle.textContent = "☰"; // Cambiar a hamburguesa
+      }
+      });
+    </script>
+</body>
+</html>
