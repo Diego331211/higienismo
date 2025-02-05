@@ -17,6 +17,7 @@ body {
   margin-right: 40px; /* Espacio extra hacia la derecha */
   color: rgb(5, 5, 5);
   text-decoration: none; /* Elimina el subrayado */
+  text-align: justify;
   align-items: flex-end; /* Baja el contenido del lado izquierdo */
 }
 .menu li:not(:first-child) {
@@ -716,8 +717,10 @@ header {
   }
 }
 .button-container8 {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   margin-right: 50px; /* Ajusta el margen para posicionar el botón */
+  gap: 20px;
 }
 .button-container {
   text-align: right;
@@ -1259,5 +1262,3 @@ header {
   padding: 0;
   white-space: nowrap; /* Evita que los elementos se rompan en varias líneas */
 }
-
-
