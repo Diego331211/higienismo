@@ -1197,8 +1197,10 @@ header {
   }
 
   .button-container8 {
-    display: block; /* Convierte el botón en un bloque */
-    margin: 0 auto; /* Centra horizontalmente */
+    display: flex;
+    justify-content: center;
+    margin-right: 50px; /* Ajusta el margen para posicionar el botón */
+    gap: 20px;
   }
   .text-section {
     padding-right: 0; /* Eliminar padding en diseño vertical */
